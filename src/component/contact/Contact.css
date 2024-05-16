@@ -1,5 +1,6 @@
 .contact h2 {
   margin-bottom: 3rem;
+  font-size: 2.5rem;
 }
 
 .contact {
@@ -54,22 +55,37 @@
 
 .contact-details {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   align-items: center;
   flex-wrap: wrap;
   padding-bottom: 3rem;
+  padding-top: 1rem;
 }
 
 .contact-details i {
-  /* display: flex; */
-  gap: 1.5rem;
-  background-color: purple;
-  padding: 1rem;
-  border-radius: 50%;
-  outline: 2px dotted red;
+  padding: 1.5rem 0;
   font-size: 2rem;
+
 }
 
+.contact-details h3 {
+  font-size: 2rem;
+  padding: 0;
+}
+
+.contact-details p {
+  font-size: 1.1rem;
+
+}
+
+.contact-details span {
+  outline: 2px dotted rgb(255, 174, 0);
+  width: 5rem;
+  height: 5rem;
+  text-align: center;
+  border-radius: 50%;
+  background-color: purple;
+}
 
 @media (max-width: 540px) {
   .contact-form {

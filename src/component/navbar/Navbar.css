@@ -21,6 +21,7 @@
 
 .menu {
     display: flex;
+    justify-content: flex-end;
     gap: 20px;
     transition: all 0.3s;
 }
@@ -91,14 +92,14 @@
 
     .hamburger.active .bar:nth-child(1) {
         transform: rotate(45deg) translate(6px, 6px);
-      }
-      
-      .hamburger.active .bar:nth-child(2) {
+    }
+
+    .hamburger.active .bar:nth-child(2) {
         transform: rotate(-45deg) translate(1px, -1px);
-      }
-      
-      .hamburger.active .bar:nth-child(3) {
+    }
+
+    .hamburger.active .bar:nth-child(3) {
         opacity: 0;
-      }
-      
-    }      
+    }
+
+}

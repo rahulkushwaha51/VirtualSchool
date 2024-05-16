@@ -1,0 +1,10 @@
+.modify{
+    height: 50vh;
+    width: 50vw;
+}
+@media(max-width:540px){
+    .modify{
+        height: 100vh;
+        width: 95vw;
+    }
+}

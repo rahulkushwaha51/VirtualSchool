@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import Pagetr from "../../utility/Pagetr";
+import Reveal from "../../utility/Reveal";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,21 +40,22 @@ const Navbar = () => {
   };
 
   return (
-    <Pagetr>
-      {" "}
-      <nav className={`navbar ${isOpen ? "open" : ""}`}>
+    <nav className={`navbar ${isOpen ? "open" : ""}`}>
+      <Reveal direction={-100}>
         <Link to="/" className="logo">
           Virtual School
         </Link>
-        <div
-          className={`hamburger ${isOpen ? "active" : ""}`}
-          onClick={toggleMenu}
-        >
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
-        </div>
-        <ul className={`menu ${isOpen ? "open" : ""}`}>
+      </Reveal>
+      <div
+        className={`hamburger ${isOpen ? "active" : ""}`}
+        onClick={toggleMenu}
+      >
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
+      </div>
+      <Reveal direction={100}>
+        <menu className={`menu ${isOpen ? "open" : ""}`}>
           {links.map(({ id, link, path, offset }) => (
             <li key={id} className="link">
               <Link
@@ -66,9 +68,9 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
-        </ul>
-      </nav>
-    </Pagetr>
+        </menu>
+      </Reveal>
+    </nav>
   );
 };
 

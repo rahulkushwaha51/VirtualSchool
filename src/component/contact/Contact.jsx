@@ -3,6 +3,7 @@ import "./Contact.css";
 import emailjs from "@emailjs/browser";
 import Pagetr from "../../utility/Pagetr";
 import Reveal from "../../utility/Reveal";
+// import GoogleMap from "./GoogleMap";
 const Contact = () => {
   const [alert, setAlert] = useState("");
   const form = useRef();
@@ -35,8 +36,8 @@ const Contact = () => {
   //   }
 
   return (
-    <Pagetr>
-      <section id="contact" className="contact">
+    <section id="contact" className="contact">
+      <Reveal direction={-100}>
         <div className="form">
           <h2 className="heading">
             Message <span>Us!</span>
@@ -69,23 +70,31 @@ const Contact = () => {
             </button>
           </form>
         </div>
-        <p className={`${alert ? "alert" : ""}`}>{alert}</p>
+      </Reveal>
+      <p className={`${alert ? "alert" : ""}`}>{alert}</p>
+      <Reveal direction={100}>
         <div className="contact-info">
           <h2 className="heading">
             Contact <span>Details!</span>
           </h2>
           <div className="contact-details">
-            <i className="fa-solid fa-location-dot"></i>
+            <span>
+              {" "}
+              <i className="fa-solid fa-location-dot"></i>
+            </span>
             <div className="contact-info-sub">
               <h3>Office</h3>
               <p>
-                15B, Ratlam Kothi, Geeta Bhawan Square, Indore (M.P.),
-                452018
+                15B, Ratlam Kothi, Geeta Bhawan Square,
+                <br /> Indore (M.P.), 452018
               </p>
             </div>
           </div>
           <div className="contact-details">
-            <i className="fa fa-phone"></i>
+            <span>
+              {" "}
+              <i className="fa fa-phone"></i>
+            </span>
             <div className="contact-info-sub">
               <h3>Call Us</h3>
               <p>
@@ -95,7 +104,9 @@ const Contact = () => {
             </div>
           </div>
           <div className="contact-details">
-            <i className="fa-solid fa-envelope"></i>
+            <span>
+              <i className="fa-solid fa-envelope"></i>
+            </span>
             <div className="contact-info-sub">
               <h3>Email Us</h3>
               <p>
@@ -105,8 +116,10 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </section>
-    </Pagetr>
+      </Reveal>
+
+      {/* <GoogleMap /> */}
+    </section>
   );
 };
 

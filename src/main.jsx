@@ -10,7 +10,7 @@ import {
 import "./index.css";
 import Home from "./component/Home/Home.jsx";
 import Layout from "./component/Layout/Layout.jsx";
-import { AnimatePresence } from "framer-motion";
+
 import Pagetr from "./utility/Pagetr.jsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -22,8 +22,6 @@ const router = createBrowserRouter(
 );
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <AnimatePresence Pagetr={Pagetr}>
-      <RouterProvider router={router} />
-    </AnimatePresence>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
