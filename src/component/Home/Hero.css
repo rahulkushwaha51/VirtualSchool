@@ -1,6 +1,5 @@
 .home {
     width: 100%;
-    padding: 3rem 9%;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: center;
@@ -31,18 +30,38 @@
     color: transparent;
 }
 
-.benefit {
-    padding: 2rem 9%;
+.benefit,
+.values,
+.choose-us {
     text-align: center;
+    padding-top: 2rem;
 }
 
-.benefit h2{
+
+.benefit h2,
+.values h2,
+.choose-us h2 {
     font-size: 3.5rem;
+
 }
 
-.card-grid{
+.card-grid {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.values .card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.choose-us .card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     padding: 2rem 0;
 }
@@ -55,17 +74,31 @@
     padding: 1rem;
 }
 
+
+
+.values .card {
+    width: 100%;
+    height: 20rem;
+    background-color: var(--bg-color);
+    border-radius: .5rem;
+    padding: 1rem;
+}
+
+.values .special-card {
+    background-color: var(--main-color);
+}
+
 /* .card:hover{
     transform: scale(1.1);
     transition: all .5s ease-in-out;
 } */
 
-.card h3{
+.card h3 {
     font-size: 1.7rem;
     padding-bottom: 1rem;
 }
 
-.card p{
+.card p {
     font-size: 1.3rem;
 }
 
@@ -73,4 +106,20 @@
     font-size: 4rem;
     color: var(--main-color);
     padding: 1rem 0 2rem;
+}
+
+.choose-us .card {
+    width: 100%;
+    min-height: 35rem;
+    color: black;
+    background: white;
+    height: auto;
+    border-radius: .5rem;
+    padding: 1rem;
+    border: none;
+}
+
+.choose-us .card-img img {
+    width: 100%;
+    height: 15rem;
 }

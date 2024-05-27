@@ -1,13 +1,16 @@
 .footer {
     display: flex;
     justify-content: space-between;
-    padding: 5rem 2rem 1rem;
+    padding: 5rem 9% 1rem;
     gap: 1rem;
 }
 
-.logo {
+.footer .logo {
     display: flex;
     flex-direction: column;
+    /* background-color: white; */
+    color: aqua;
+    /* mix-blend-mode: multiply; */
 
 }
 
@@ -23,22 +26,7 @@
     padding: 1rem 0;
 }
 
-/* .courses {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 0.4rem;
-}
 
-.courses h1 {
-    font-size: 1.2rem;
-    font-weight: bolder;
-}
-
-.course-details {
-    padding-left: 0.4rem;
-    line-height: 0.8rem;
-} */
 
 .footer-links {
     display: flex;
@@ -53,7 +41,43 @@
 }
 
 .footer-link {
+    display: block;
     padding-left: 0.4rem;
+    font-size: 1.4rem;
+    padding-bottom: 1.5rem;
+    color: white;
+}
+
+.footer-link:hover{
+    color: var(--main-color);
+}
+
+.footer-contact .contact-details span {
+    background-color: transparent;
+    outline: none;
+    width: 3.5rem;
+    text-align: left;
+}
+
+.footer h2 {
+    font-size: 2.4rem;
+    padding-bottom: 1rem;
+}
+
+.footer-contact .contact-details {
+    gap: 0;
+    padding: 0;
+
+}
+
+
+.footer .social-links a{
+   background-color: transparent;
+}
+.footer .social-links i{
+    font-size: 3rem;
+    padding: .5rem ;
+    border-radius: .5rem;
 }
 
 @media (max-width:540px) {

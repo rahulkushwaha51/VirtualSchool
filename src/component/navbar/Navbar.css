@@ -2,8 +2,8 @@
     position: sticky;
     top: 0;
     padding: 2rem 9%;
-    background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0);
+    backdrop-filter: blur(100px);
     color: white;
     border-bottom: .2rem solid rgba(0, 0, 0, 0.2);
     display: flex;
@@ -17,6 +17,12 @@
     font-weight: 600;
     color: var(--text-color);
     cursor: default;
+}
+
+.logo img {
+    width: 25rem;
+    height: 5rem;
+    background-color: white;
 }
 
 .menu {

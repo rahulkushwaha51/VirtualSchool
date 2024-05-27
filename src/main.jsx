@@ -11,7 +11,6 @@ import "./index.css";
 import Home from "./component/Home/Home.jsx";
 import Layout from "./component/Layout/Layout.jsx";
 
-import Pagetr from "./utility/Pagetr.jsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>

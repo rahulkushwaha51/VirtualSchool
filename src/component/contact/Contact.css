@@ -87,6 +87,11 @@
   background-color: purple;
 }
 
+.social h2{
+  text-align: left;
+  font-size: 2rem;
+}
+
 @media (max-width: 540px) {
   .contact-form {
     max-width: 85%;

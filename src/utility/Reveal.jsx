@@ -1,32 +1,34 @@
-import { motion, useAnimation, useInView } from "framer-motion";
+import { delay, motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 
-const Reveal = ({ children,direction }) => {
-  const ref = useRef(null);
 
+
+
+export const RevealX = ({ children, direction }) => {
+  const ref = useRef();
   const isinView = useInView(ref, { once: true });
-
   const mainControls = useAnimation();
-  const slideControls = useAnimation();
+
+  const varientsX = {
+    hidden: {
+      opacity: 0,
+      x: direction,
+      transition: {
+        duration: 1,
+        delay: 0.25,
+      },
+    },
+    visible: { opacity: 1, x: 0 },
+  };
 
   useEffect(() => {
-    console.log(isinView);
     if (isinView) {
       mainControls.start("visible");
-      slideControls.start("visible");
     }
-  }, [isinView, mainControls, slideControls]);
+  }, [isinView, mainControls]);
   return (
     <div ref={ref} style={{ position: "relative", width: "100%" }}>
-      <motion.div
-        variants={{
-          hidden: { opacity: 0, x: direction },
-          visible: { opacity: 1, x: 0 },
-        }}
-        initial="hidden"
-        animate={mainControls}
-        transition={{ duration: 1, delay: .25 }}
-      >
+      <motion.div variants={varientsX} initial="hidden" animate={mainControls}>
         {children}
       </motion.div>
 
@@ -52,4 +54,41 @@ const Reveal = ({ children,direction }) => {
   );
 };
 
-export default Reveal;
+export const RevealY = ({children,direction}) => {
+  const ref = useRef();
+  const isinView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+
+
+  const varientsY = {
+    hidden: {
+      opacity: 0,
+      y: direction,
+      transition: {
+        duration: 1,
+        delay: 0.25,
+      },
+    },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  useEffect(() => {
+    
+    if (isinView) {
+      mainControls.start("visible");
+      // slideControls.start("visible");
+    }
+  });
+  return (
+    <div ref={ref} style={{ position: "relative", width: "100%" }}>
+      <motion.div
+        variants={varientsY}
+        initial="hidden"
+        animate={mainControls}
+        transition={{ duration: 1, delay: 0.25 }}
+      >
+        {children}
+      </motion.div>
+    </div>
+  );
+};

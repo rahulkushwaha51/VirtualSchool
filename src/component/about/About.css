@@ -1,0 +1,85 @@
+.about-us .section1 {
+    display: flex;
+    gap: 1rem;
+}
+
+.about-us .section2 {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    background-color: rgb(97, 97, 235);
+    padding: 4rem ;
+    margin-top: 4rem;
+    border-radius: 1rem;
+}
+
+.about-us .section2 .about-info {
+    background-color: white;
+    color: black;
+    padding: 1rem 2rem;
+    border-radius: 1.5rem;
+    width: 40%;
+}
+
+.about-us .section2 .about-info h2 {
+    font-size: 4rem;
+    line-height: 5rem;
+}
+
+.about-us .section2 .about-info p {
+    padding-top: 2rem;
+}
+
+.about-info {
+    background-color: white;
+    color: black;
+    padding: 1rem 2rem;
+    border-radius: 1.5rem;
+    width: 50%;
+}
+
+.about-info h3 {
+    color: var(--main-color);
+}
+
+.about-info h2 {
+    font-size: 6rem;
+    font-weight: 500;
+}
+
+.about-info p {
+    padding-top: 7rem;
+    font-size: 1rem;
+}
+
+.about-us-card {
+    /* background-color: white; */
+    color: black;
+    /* padding: 1rem 2rem; */
+    border-radius: 1.5rem;
+    width: 50%;
+}
+
+.about-us-card img {
+    width: 100%;
+    height: 30rem;
+    border-radius: 1.5rem;
+}
+
+.about-us-card-1 {
+    background-color: white;
+    display: flex;
+    gap: 2rem;
+    border-radius: 1rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+    padding: 1rem 2rem;
+}
+
+.about-us-card-1 .card1 {
+    background-color: rgb(244, 243, 243);
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 50%;
+    text-align: center;
+}

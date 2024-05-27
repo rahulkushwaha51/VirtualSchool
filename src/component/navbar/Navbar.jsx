@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import Pagetr from "../../utility/Pagetr";
-import Reveal from "../../utility/Reveal";
+import  { RevealX } from "../../utility/Reveal";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,17 +17,17 @@ const Navbar = () => {
     {
       id: 2,
       link: "About",
-      path: "about",
+      path: "/about",
     },
     {
       id: 3,
       link: "Services",
-      path: "services",
+      path: "/services",
     },
     {
-      id: 6,
+      id: 4,
       link: "contact",
-      path: "contact",
+      path: "/contact",
     },
   ];
 
@@ -41,11 +41,11 @@ const Navbar = () => {
 
   return (
     <nav className={`navbar ${isOpen ? "open" : ""}`}>
-      <Reveal direction={-100}>
+      <RevealX direction={-100}>
         <Link to="/" className="logo">
-          Virtual School
+         <img src="src\assets\WhatsApp Image 2024-05-20 at 1.20.11 PM.jpeg" alt="" />
         </Link>
-      </Reveal>
+      </RevealX>
       <div
         className={`hamburger ${isOpen ? "active" : ""}`}
         onClick={toggleMenu}
@@ -54,7 +54,7 @@ const Navbar = () => {
         <span className="bar"></span>
         <span className="bar"></span>
       </div>
-      <Reveal direction={100}>
+      <RevealX direction={100}>
         <menu className={`menu ${isOpen ? "open" : ""}`}>
           {links.map(({ id, link, path, offset }) => (
             <li key={id} className="link">
@@ -69,7 +69,7 @@ const Navbar = () => {
             </li>
           ))}
         </menu>
-      </Reveal>
+      </RevealX>
     </nav>
   );
 };
