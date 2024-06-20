@@ -13,35 +13,127 @@
 }
 
 :root {
-    --bg-color: rgb(31, 36, 45);
-    --bg-second: rgb(50, 57, 70);
-    --text-color: rgb(255, 255, 255);
-    --main-color: rgb(0, 238, 255);
+    --bg-color: rgb(255, 255, 255);
+    --bg-second: rgb(240, 237, 237);
+    --main-color: rgb(0, 59, 93);
+    --main-color-second: rgb(205, 239, 255);
+    --text-color: rgb(0, 0, 0);
+    --text-color-second: rgb(0, 127, 182);
+    --fade-color: rgb(136, 136, 136);
+    ;
+    --border-color: rgba(0, 0, 0, 0.3);
 }
 
-html {
+/* html {
     font-size: 62.5%;
     overflow-x: hidden;
-}
+} */
 
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
+    /* min-width: 100%; */
 }
 
-section{
+section {
     min-height: 100dvh;
     padding: 10rem 9% 2rem;
 }
 
-span{
-    color: var(--main-color);
+span {
+    color: rgb(192, 53, 55);
 }
 
-@media  (max-width: 720px){
-
-section{
-    padding: 10rem 3% 2rem;
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--bg-second);
+    letter-spacing: .1rem;
+    font-weight: 500;
+    cursor: pointer;
 }
 
-}                    
+.btn:hover {
+    box-shadow: none;
+}
+
+.btn-secondry {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--bg-second);
+    border-radius: .4rem;
+    font-size: 1.4rem;
+    letter-spacing: .1rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.header {
+    background-color: rgba(13, 14, 13, 0.724);
+    background-image: url("./component/assets/coursepageimage.jpg");
+    background-blend-mode: multiply;
+    object-fit: cover;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 6rem 10%;
+    color: white;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: bolder;
+    color: white;
+}
+
+.header a,
+.header span {
+    color: white;
+    padding: 0 .1rem;
+}
+
+.bottom-line{
+    padding: .5rem 0;
+}
+
+.bottom-line::after {
+    content: "";
+    position: absolute;
+    width: 6rem;
+    height: .2rem;
+    left: 0;
+    background-color: rgb(192, 53, 55);
+    border-radius: .5rem;
+}
+
+.bottom-line-second::before {
+    content: "";
+    position: absolute;
+    width: 2rem;
+    height: .5rem;
+    left: 1rem;
+    margin-top: -2px;
+    background-color: rgb(192, 53, 55);
+    border-radius: .5rem;
+}
+
+.heading{
+    position: relative;
+    text-wrap: wrap;
+}
+
+.heading h2{
+    text-align: left;
+}
+@media (max-width: 720px) {
+
+    section {
+        padding: 2rem 3% 2rem;
+    }
+
+}

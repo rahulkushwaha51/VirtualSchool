@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-import Pagetr from "../../utility/Pagetr";
-import  { RevealX } from "../../utility/Reveal";
-
+import img from "../../assets/logo.jpeg";
+import google from "../../assets/google-play.svg";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState("");
+  const [activeLink, setActiveLink] = useState("/");
 
   const links = [
     {
@@ -16,18 +15,29 @@ const Navbar = () => {
     },
     {
       id: 2,
-      link: "About",
-      path: "/about",
+      link: "About Us",
+      path: "about",
     },
     {
       id: 3,
-      link: "Services",
-      path: "/services",
+      link: "Gallery",
+      path: "gallery",
     },
     {
       id: 4,
-      link: "contact",
-      path: "/contact",
+      link: "Services",
+      path: "service",
+    },
+    // {
+    //   id: 5,
+    //   link: "Hero",
+    //   path: "hero",
+    // },
+
+    {
+      id: 6,
+      link: "Contact Us",
+      path: "contact",
     },
   ];
 
@@ -38,39 +48,50 @@ const Navbar = () => {
   const handleSetActive = (to) => {
     setActiveLink(to);
   };
-
   return (
-    <nav className={`navbar ${isOpen ? "open" : ""}`}>
-      <RevealX direction={-100}>
-        <Link to="/" className="logo">
-         <img src="src\assets\WhatsApp Image 2024-05-20 at 1.20.11 PM.jpeg" alt="" />
-        </Link>
-      </RevealX>
-      <div
-        className={`hamburger ${isOpen ? "active" : ""}`}
-        onClick={toggleMenu}
-      >
-        <span className="bar"></span>
-        <span className="bar"></span>
-        <span className="bar"></span>
+    <>
+      <div className="nav-top">
+        <h2>Download Our App</h2>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.virtualschool"
+          target="_blank"
+          rel="noreferrer"
+          className="download-btn"
+        >
+          <img src={google} alt="google-play" />
+        </a>
       </div>
-      <RevealX direction={100}>
-        <menu className={`menu ${isOpen ? "open" : ""}`}>
-          {links.map(({ id, link, path, offset }) => (
+
+      <nav className={`navbar ${isOpen ? "open" : ""}`}>
+        <Link to="/" className="logo">
+          <img src={img} alt="" />
+        </Link>
+        <div
+          className={`hamburger ${isOpen ? "active" : ""}`}
+          onClick={toggleMenu}
+        >
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
+        <ul className={`menu ${isOpen ? "open" : ""}`}>
+          {links.map(({ id, link, path }) => (
             <li key={id} className="link">
               <Link
                 to={path}
-                // onSetActive={()=>setActiveLink(to)}
                 className={activeLink === path ? "active" : ""}
-                onClick={toggleMenu}
+                onClick={() => {
+                  handleSetActive(path);
+                  toggleMenu();
+                }}
               >
                 {link}
               </Link>
             </li>
           ))}
-        </menu>
-      </RevealX>
-    </nav>
+        </ul>
+      </nav>
+    </>
   );
 };
 

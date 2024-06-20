@@ -1,67 +1,101 @@
+.nav-top {
+    background-color: var(--main-color);
+    height: 5rem;
+    padding: 0 5%;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-top h2 {
+    color: var(--bg-color);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.nav-top img {
+    width: 15rem;
+    height: 15rem;
+}
+
+
+
 .navbar {
     position: sticky;
+    min-width: 100%;
     top: 0;
-    padding: 2rem 9%;
-    background: rgba(0, 0, 0);
-    backdrop-filter: blur(100px);
-    color: white;
-    border-bottom: .2rem solid rgba(0, 0, 0, 0.2);
+    padding: 1rem 5%;
+    background: var(--bg-color);
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 10;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 4px 2px 8px var(--border-color);
 }
 
 .logo {
-    font-size: 2.5rem;
-    font-weight: 600;
-    color: var(--text-color);
-    cursor: default;
+    cursor: pointer;
 }
 
 .logo img {
-    width: 25rem;
-    height: 5rem;
-    background-color: white;
+    width: 15rem;
 }
 
 .menu {
     display: flex;
-    justify-content: flex-end;
-    gap: 20px;
+    gap: 2rem;
     transition: all 0.3s;
 }
 
 .link a {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     color: var(--text-color);
-    margin-left: 4rem;
-    transition: .3s;
+    display: inline-block;
+    padding: .2rem 1rem;
+    border-radius: .2rem;
 }
 
-.link a:hover,
-.link a.active {
-    cursor: pointer;
-    color: var(--main-color);
+
+.link a.active,
+.link a:hover {
+    background-color: var(--main-color);
+    color: var(--bg-color);
 }
 
 .hamburger {
     display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
     cursor: pointer;
 }
 
 .bar {
-    width: 25px;
     height: 3px;
+    width: 30px;
     background-color: var(--text-color);
-    margin: 3px 0;
     transition: all 0.3s ease-in-out;
     border-radius: .2rem;
 }
 
-@media (max-width:768px) {
+
+
+@media (max-width: 768px) and (orientation: portrait) {
     .navbar {
-        padding: 2rem 3%;
+        padding: 1rem 6%;
+        position: sticky;
+        top: 0;
+    }
+
+    .nav-top {
+        justify-content: center;
+    }
+
+    .nav-top h2 {
+        display: none;
     }
 
     .hamburger {
@@ -76,17 +110,43 @@
         top: 100%;
         left: 0;
         width: 100%;
-        background: rgba(0, 0, 0, 0.8);
+        background: var(--bg-color);
         backdrop-filter: blur(10px);
         border-bottom: .2rem solid rgba(254, 254, 254, 0.2);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
         flex-direction: column;
-        display: none;
+        gap: 0;
+        transform: translateX(-100%);
         transition: all .5s ease;
     }
 
+    .menu li {
+        transform: translateX(-100%);
+    }
 
-    .menu.open {
+    .menu li:nth-child(1) {
+        transition: all .8s ease;
+    }
+
+    .menu li:nth-child(2) {
+        transition: all 1s ease;
+    }
+
+    .menu li:nth-child(3) {
+        transition: all 1.2s ease;
+    }
+
+    .menu li:nth-child(4) {
+        transition: all 1.4s ease;
+    }
+
+    .menu li:nth-child(5) {
+        transition: all 1.6s ease;
+    }
+
+    .menu.open,
+    .menu.open li {
+        transform: translateX(0);
         display: flex;
     }
 
@@ -97,15 +157,50 @@
     }
 
     .hamburger.active .bar:nth-child(1) {
-        transform: rotate(45deg) translate(6px, 6px);
-    }
-
-    .hamburger.active .bar:nth-child(2) {
-        transform: rotate(-45deg) translate(1px, -1px);
+        transform: rotate(45deg);
+        transform-origin: 0 0;
     }
 
     .hamburger.active .bar:nth-child(3) {
-        opacity: 0;
+        transform: rotate(-45deg) translate(0px, -1px);
+        transform-origin: 0 0;
     }
 
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .navbar {
+        padding: 1rem 6%;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+    .link a {
+        font-size: 1.5rem;
+        margin-left: 2rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .logo img {
+        width: 12rem;
+    }
+
+    .menu.open {
+        transform: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: static;
+        background: transparent;
+        box-shadow: none;
+    }
 }

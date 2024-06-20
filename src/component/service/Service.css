@@ -1,34 +1,130 @@
-.services-container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    color: white;
+.header {
+    background-color: var(--main-color);
 }
 
-.services-container h1 {
-    text-align: center;
+.services-container {
+    width: 100%;
+    min-height: 100%;
+    padding: 4rem 5%;
+}
+
+.services-container h2 {
+    /* text-align: center; */
     margin-bottom: 40px;
+    color: var(--text-color);
+    font-size: 24px;
+    font-weight: 600;
+
+}
+
+.services-container .benefit {
+    width: 100%;
+    background-color: var(--bg-second);
+}
+
+.benefit .card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 2rem 3%;
+}
+
+.benefit .card {
+    width: 100%;
+    height: 10rem;
+    background-color: var(--bg-color);
+    border-radius: .5rem;
+    padding: 1rem;
+}
+
+.benefit .card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.benefit .card p {
+    font-size: 1rem;
+    color: var(--text-color);
 }
 
 .service-section {
     margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    text-align: left;
+}
+
+.service-section img {
+    width: 50%;
+    height: 30rem;
+    border-radius: .5rem;
+}
+
+.service-section div {
+    width: 50%;
+    border-radius: .5rem;
+    text-align: left;
 }
 
 .service-section h2 {
     color: #333;
     margin-bottom: 10px;
+    font-size: 2rem;
+    color: var(--main-color);
+    text-align: left;
 }
 
 .service-section p {
     font-size: 16px;
     margin-bottom: 10px;
+    color: #000;
 }
 
 .service-section ul {
-    list-style-type: disc;
-    margin-left: 20px;
+    list-style-type: none;
 }
 
-.service-section ul li {
+.service-section div ul li {
     margin-bottom: 5px;
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+
+    .services-container {
+        padding: 2rem 4%;
+    }
+
+    .service-section {
+        flex-direction: column;
+        margin: 0;
+
+    }
+
+    .benefit .card-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+        padding: 2rem 3%;
+    }
+
+    /* .service-section:nth-of-type(1) {
+        flex-direction: column-reverse;
+    } */
+
+    .service-section-reverse {
+        flex-direction: column-reverse;
+    }
+
+    .service-section img {
+        width: 100%;
+        height: 30rem;
+    }
+
+    .service-section div {
+        width: 100%;
+    }
 }

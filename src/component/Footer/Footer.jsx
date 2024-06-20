@@ -1,18 +1,19 @@
-import React from "react";
+
 import "./Footer.css";
 import { RevealX } from "../../utility/Reveal";
 import { Link } from "react-router-dom";
 import Social from "../Social/Social";
+import img from '../../assets/logo.jpeg'
 const Footer = () => {
   return (
-    <RevealX direction={-100}>
+    <RevealX direction={"-100%"}>
       <footer>
         <div className="footer">
           <div className="logo">
             <img
-              src="src\assets\WhatsApp Image 2024-05-20 at 1.20.11 PM.jpeg"
+              src={img}
             />
-            {/* <h2>Virtual School</h2> */}
+            <h2>Follow us on Social media!</h2>
             <Social/>
           </div>
 

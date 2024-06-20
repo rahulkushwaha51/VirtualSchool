@@ -1,9 +1,9 @@
-import React, { useState, useRef } from "react";
+import  { useState, useRef } from "react";
 import "./Contact.css";
 import emailjs from "@emailjs/browser";
 import { RevealX } from "../../utility/Reveal";
 import GoogleMap from "./GoogleMap";
-import Social from "../Social/Social";
+// import Social from "../Social/Social";
 const Contact = () => {
   const [alert, setAlert] = useState("");
   const form = useRef();
@@ -17,7 +17,7 @@ const Contact = () => {
         "8gAx5c3B9hdKWhTMD"
       )
       .then(
-        (result) => {
+        () => {
           setAlert("Email sent successfully");
           setTimeout(() => {
             setAlert(null);
@@ -124,8 +124,8 @@ const Contact = () => {
         </RevealX>
       </div>
       <div className="social">
-        <h2 className="gradient-text">Follow Us</h2>
-        <Social />
+      
+        {/* <Social /> */}
       </div>
       
       <GoogleMap />

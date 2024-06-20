@@ -1,80 +1,139 @@
-import React from "react";
-
 import "./Hero.css";
 
-import Shufflegrid from "./Sufflegrid";
-import { RevealX, RevealY } from "../../utility/Reveal";
+// import Shufflegrid from "./Sufflegrid";
+import { RevealY } from "../../utility/Reveal";
 
-
+import img from "../../assets/choose-1.webp";
+import img2 from "../../assets/choose-2.jpeg";
+import img3 from "../../assets/choose-3.jpeg";
+import img4 from "../../assets/choose-4.jpeg";
+import img5 from "../../assets/choose-1.webp";
+import img6 from "../../assets/choose-3.jpeg";
 import { motion } from "framer-motion";
+import chooselog from "../../assets/choose-logo.jpg";
+import Marquee from "react-fast-marquee";
 const Hero = () => {
-  const cardsData = [
-    {
-      iconClass: "fa-solid fa-globe",
-      title: "Future of Education",
-      description:
-        "A new world order post 2020, dictates a whole new outlook at its education system too.",
-      direction: "-100%",
-    },
-    {
-      iconClass: "fa-solid fa-leaf",
-      title: "Healthy Balance between Fun & Learning",
-      direction: "-100%",
-      description:
-        "All work and no play make children dull and dreary. We provide just the right balance between scholastic and co-scholastic areas.",
-    },
-    {
-      iconClass: "fa-solid fa-desktop",
-      title: "Flexible Learning",
-      direction: "100%",
-      description:
-        "Our online classes are conducted in the morning and evening batches. You can choose the batch that suits you best.",
-    },
-    {
-      iconClass: "fa-solid fa-address-book",
-      title: "Curated Curriculum",
-      direction: "100%",
-      description: "Our curriculum is tailor-made to forge tomorrow’s leaders.",
-    },
-  ];
+  // const cardsData = [
+  //   {
+  //     iconClass: "fa-solid fa-globe",
+  //     title: "Future of Education",
+  //     description:
+  //       "A new world order post 2020, dictates a whole new outlook at its education system too.",
+  //     direction: "-100%",
+  //   },
+  //   {
+  //     iconClass: "fa-solid fa-leaf",
+  //     title: "Healthy Balance between Fun & Learning",
+  //     direction: "-100%",
+  //     description:
+  //       "All work and no play make children dull and dreary. We provide just the right balance between scholastic and co-scholastic areas.",
+  //   },
+  //   {
+  //     iconClass: "fa-solid fa-desktop",
+  //     title: "Flexible Learning",
+  //     direction: "100%",
+  //     description:
+  //       "Our online classes are conducted in the morning and evening batches. You can choose the batch that suits you best.",
+  //   },
+  //   {
+  //     iconClass: "fa-solid fa-address-book",
+  //     title: "Curated Curriculum",
+  //     direction: "100%",
+  //     description: "Our curriculum is tailor-made to forge tomorrow’s leaders.",
+  //   },
+  // ];
 
-  const cardsData1 = [
-    {
-      iconClass: "fa-solid fa-globe",
-      title: "Integrity",
-      description: "Integrity is the soul of all virtue.",
-    },
-    {
-      iconClass: "fa-solid fa-globe",
-      title: "Compassion",
-      description: "Compassion is the soul of all humanity.",
-    },
-    {
-      iconClass: "fa-solid fa-globe",
-      title: "Excellence",
-      description: "Excellence at the heart of all human endeavors.",
-    },
-  ];
+  // const cardsData1 = [
+  //   {
+  //     iconClass: "fa-solid fa-globe",
+  //     title: "Integrity",
+  //     description: "Integrity is the soul of all virtue.",
+  //   },
+  //   {
+  //     iconClass: "fa-solid fa-leaf",
+  //     title: "Compassion",
+  //     description: "Compassion is the soul of all humanity.",
+  //   },
+  //   {
+  //     iconClass: "fa-solid fa-desktop",
+  //     title: "Excellence",
+  //     description: "Excellence at the heart of all human endeavors.",
+  //   },
+  // // ];
   const cardsData2 = [
     {
-      img:"src/assets/choose-1.webp",
-      title: "Intellectual Development",
-      description: "A child blossoms when the mind is free and imagination is left unfettered. We believe in according the right balance of liberty and supervision so that every child experiences holistic development."
+      icon: "fa-regular fa-hand-point-up",
+      title: "We Put You First",
+      description:
+        "Our experienced counsellors and service team will work closely with you to ensure a seamless and a stress-free admission process.",
     },
     {
-      img: "src/assets/choose-2.jpeg",
-      title: "Holistic Development",
-      description: "We believe that a child’s growth is stimulated in equal measure through studies and games and hence we offer equal opportunities to excel at both.",
+      icon: "fa-regular fa-chess-queen",
+      title: "Passion",
+      description:
+        "We are passionate in our bid to help students make better academic decisions that could change their lives forever.",
     },
     {
-      img: "src/assets/choose-3.jpeg",
-      title: "Optimum utilization of time",
-      description: "Children these days, lead ultra-fast paced, busy lives and every moment is crucial. We ensure engagement that takes this into account and provides the best utilization of their most precious resource: time.",
+      icon: "fa-regular fa-calendar-days",
+      title: "Experience",
+      description:
+        "With over 12 years of experience, our counsellors can help you figure out your next move",
     },
     {
-      img: "src/assets/choose-4.jpeg",
-      title: "Custom-paced learning",
-      description: "Learning here isn’t by rote, so days are not spent cramming subjects. Instead, every child studies subjects that they wish to and at a pace that best suits them.",
+      icon: "fa-regular fa-handshake",
+      title: "Affiliations",
+      description:
+        "Our affiliations with over 700 universities worldwide ensure that you are not short of choices",
+    },
+    {
+      icon: "fa-solid fa-hospital",
+      title: "Our Services",
+      description:
+        "Our services are designed to support you from the moment of initial counselling till completion of your admissions",
+    },
+    {
+      icon: "fa-solid fa-coins",
+      title: "Free of Cost",
+      description:
+        "No charges were taken from 95% of our students. The remaining 5% paid for special customised services",
+    },
+  ];
+  const cardsData3 = [
+    {
+      img: img,
+      title: "One-on-one Counselling Sessions ",
+      description:
+        "One-on-one Counselling Sessions: Trained professionals will offer personalized guidance to students, helping them identify their interests, strengths, and career goals. ",
+    },
+    {
+      img: img2,
+      title: "Career Counselling Assessments ",
+      description:
+        "Utilizing reputable assessment tools, students will have the opportunity to assess their skills, interests, and values to determine suitable career paths",
+    },
+    {
+      img: img3,
+      title: "Academic Counselling ",
+      description:
+        "This focuses on helping students with educational planning, course selection, study skills, time management, and academic goal setting. ",
+    },
+    {
+      img: img4,
+      title: " Personal Development Counselling ",
+      description:
+        "Supports students in developing life skills, improving relationships, building self-esteem, and managing personal challenges.",
+    },
+    {
+      img: img5,
+      title: " Aptitude Tests ",
+      description:
+        "Evaluate specific skills or abilities related to particular tasks or fields, such as numerical, verbal, or abstract reasoning. ",
+    },
+    {
+      img: img6,
+      title: " Psychometric test  ",
+      description:
+        "Which are assessment design to measure psychological attributes like, Intelligent, personality traits, aptitudes and specific skills. This test aim to provide inside into an individual abilities performances and behavior ",
     },
   ];
 
@@ -85,14 +144,37 @@ const Hero = () => {
     },
   };
 
+  const brand = [
+    img,
+    img2,
+    img3,
+    img4,
+    img5,
+    img6,
+    img,
+    img2,
+    img3,
+    img4,
+    img5,
+    img6,
+    img,
+    img2,
+    img3,
+    img4,
+    img5,
+    img6,
+    img6,
+    img6,
+    img6,
+    img6,
+  ];
+
   return (
     <>
-      <div className="home">
+      {/* <div className="home">
         <RevealX direction={"-100%"}>
           <div className="home-intro">
-            <h2 className="gradient-text">
-              Welcome To Virtual School India’s Best Online School{" "}
-            </h2>
+            <h2 className="gradient-text">Welcome To Virtual School</h2>
             <p>
               A brand-new world order coerces us to think differently and
               re-think our ways of working, living and educating our future
@@ -118,9 +200,9 @@ const Hero = () => {
         <RevealX direction={"100%"}>
           <Shufflegrid />
         </RevealX>
-      </div>
+      </div> */}
 
-      <div className="benefit">
+      {/* <div className="benefit">
         <RevealX direction={"-100%"}>
           <h2 className="gradient-text">Benefits of Virtual School</h2>
         </RevealX>
@@ -128,7 +210,7 @@ const Hero = () => {
         <div className="card-grid">
           {cardsData.map(
             ({ iconClass, title, description, direction }, index) => (
-              <RevealX direction={direction}>
+              <RevealX direction={direction} key={index}>
                 <motion.div
                   className="card"
                   key={index}
@@ -144,8 +226,9 @@ const Hero = () => {
             )
           )}
         </div>
-      </div>
-      <div className="values">
+      </div> */}
+
+      {/* <div className="values">
         <RevealY direction={"-100%"}>
           <h2 className="gradient-text">Our Core Values</h2>
         </RevealY>
@@ -153,7 +236,7 @@ const Hero = () => {
         <div className="card-grid">
           {cardsData1.map(
             ({ iconClass, title, description, direction }, index) => (
-              <RevealY direction={direction}>
+              <RevealY direction={direction} key={index}>
                 <motion.div
                   className={`card ${index === 1 ? "special-card" : ""}`}
                   key={index}
@@ -170,15 +253,61 @@ const Hero = () => {
             )
           )}
         </div>
-      </div>
+      </div> */}
       <div className="choose-us">
+        <div className="choose-us-section1">
+          <div className="choose-us-logo">
+            <img src={chooselog} alt="chooose" />
+            <h2>
+              Virtual <span>School</span>
+            </h2>
+          </div>
+        </div>
+        <div className="choose-us-section2">
+          <div className="heading">
+            <h2>
+              Why <span>Choose</span> Us
+            </h2>
+            <div className="bottom-line bottom-line-second"></div>
+          </div>
+          <div className="card-grid">
+            {cardsData2.map(
+              ({ icon, title, description, direction }, index) => (
+                <RevealY direction={direction} key={index}>
+                  <motion.div
+                    className='card'
+                    key={index}
+                    variants={buttonVarients}
+                    whileHover="hover"
+                  >
+                    <div className="card-icon">
+                      <i className={icon}></i>
+                    </div>
+                    <div>
+                      <h3>{title}</h3>
+                      <p>{description}</p>
+                    </div>
+                  </motion.div>
+                </RevealY>
+              )
+            )}
+          </div>
+        </div>
+      </div>
+
+      <div className="service">
         <RevealY direction={"-100%"}>
-          <h2 className="gradient-text">Why Choose Us</h2>
+          <div className="heading">
+            <h2>
+              Our <span>Counselling</span> Support
+            </h2>
+            <div className="bottom-line bottom-line-second"></div>
+          </div>
         </RevealY>
 
         <div className="card-grid">
-          {cardsData2.map(({ img, title, description, direction }, index) => (
-            <RevealY direction={direction}>
+          {cardsData3.map(({ img, title, description, direction }, index) => (
+            <RevealY direction={direction} key={index}>
               <motion.div
                 className={`card ${index === 1 ? "special-card" : ""}`}
                 key={index}
@@ -188,12 +317,35 @@ const Hero = () => {
                 <div className="card-img">
                   <img src={img} alt="" />
                 </div>
-                <h3>{title}</h3>
-                <p>{description}</p>
+                <div className="card-content">
+                  <h3>{title}</h3>
+                  <p>{description}</p>
+                </div>
               </motion.div>
             </RevealY>
           ))}
         </div>
+      </div>
+      <div className="brand-name-container">
+        <div className="heading">
+          <h2>
+            Our <span>Partner</span> Institutions
+          </h2>
+          <div className="bottom-line bottom-line-second"></div>
+        </div>
+
+        <Marquee pauseOnHover={true} speed={80}>
+          {brand.map((item, index) => (
+            <div className="brand-name" key={index}>
+              <img
+                src={item}
+                alt={`Image ${index + 1}`}
+                key={index}
+                className="scroller-image"
+              />
+            </div>
+          ))}
+        </Marquee>
       </div>
     </>
   );

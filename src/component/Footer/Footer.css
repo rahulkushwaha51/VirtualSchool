@@ -1,32 +1,49 @@
 .footer {
     display: flex;
     justify-content: space-between;
-    padding: 5rem 9% 1rem;
+    padding: 5rem 5% 1rem;
     gap: 1rem;
+
 }
 
 .footer .logo {
     display: flex;
     flex-direction: column;
-    /* background-color: white; */
-    color: aqua;
-    /* mix-blend-mode: multiply; */
+    color: var(--main-color);
+}
+
+.footer .logo img {
+    width: 15rem;
 
 }
 
-.logo p {
-    font-size: 1rem;
-    font-weight: 400;
-    width: 25ch;
-    padding: 1rem;
+.footer h2 {
+    font-size: 1.4rem;
+    padding-top: 1rem;
+    font-weight: 600;
+}
+
+.footer .social-links {
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.footer .social-links a {
+    background-color: transparent;
+}
+
+.footer .social-links i {
+    font-size: 3rem;
+    padding: .5rem 0;
+    border-radius: .5rem;
 }
 
 .copyright {
     text-align: center;
     padding: 1rem 0;
 }
-
-
 
 .footer-links {
     display: flex;
@@ -35,20 +52,20 @@
 }
 
 .footer-links h2 {
-    font-size: 1.4rem;
-    font-weight: bolder;
-    padding-left: .3rem;
+    font-size: 1.8rem;
+    font-weight:600;
+
 }
 
 .footer-link {
     display: block;
     padding-left: 0.4rem;
-    font-size: 1.4rem;
-    padding-bottom: 1.5rem;
-    color: white;
+    font-size: 1.2rem;
+    padding-bottom: .5rem;
+    color: var(--text-color);
 }
 
-.footer-link:hover{
+.footer-link:hover {
     color: var(--main-color);
 }
 
@@ -59,9 +76,9 @@
     text-align: left;
 }
 
-.footer h2 {
-    font-size: 2.4rem;
-    padding-bottom: 1rem;
+.footer-contact h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
 }
 
 .footer-contact .contact-details {
@@ -71,25 +88,29 @@
 }
 
 
-.footer .social-links a{
-   background-color: transparent;
-}
-.footer .social-links i{
-    font-size: 3rem;
-    padding: .5rem ;
-    border-radius: .5rem;
-}
-
-@media (max-width:540px) {
+@media (max-width:768px) {
     .footer {
         flex-direction: column;
+        padding: 1rem 4%;
+        width: 100%;
+        gap: 0;
+    }
+
+    .logo h2 {
+        width: 100%;
+        padding: 1rem 1%;
     }
 
     .logo {
         padding: 0;
+
     }
 
     .logo p {
         width: 90vw;
+    }
+
+    .footer-contact h2{
+        padding-bottom: 1rem;
     }
 }

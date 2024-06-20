@@ -11,18 +11,19 @@
     /* justify-content: center; */
     align-items: center;
     gap: 2rem;
-    padding: 1rem;
+    padding: 1rem 0;
     margin: 1rem 0;
 }
+
 .social-links a {
-  cursor: pointer;
-  z-index: 1;
+    cursor: pointer;
+    z-index: 1;
 }
 
 .social-links i {
     font-size: 6.5rem;
     padding: 2rem 3rem;
-    background-color: var(--main-color);
+    background-color: var(--bg-color);
     border-radius: 1.5rem;
 }
 
@@ -30,7 +31,6 @@
     cursor: pointer;
     transform: scale(1.1);
     transition: all .3s ease-in;
-    background-color: red;
     z-index: 1000;
 }
 
@@ -62,4 +62,3 @@
     padding: 0.2rem 0.2rem 0 0.2rem;
     cursor: pointer;
 }
-
