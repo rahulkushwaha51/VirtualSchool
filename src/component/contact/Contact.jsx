@@ -1,23 +1,77 @@
-import  { useState, useRef } from "react";
+import { useState } from "react";
 import "./Contact.css";
-import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
 import { RevealX } from "../../utility/Reveal";
 import GoogleMap from "./GoogleMap";
+import Header from "../general/Header";
 // import Social from "../Social/Social";
 const Contact = () => {
   const [alert, setAlert] = useState("");
-  const form = useRef();
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [mobile, setMobile] = useState("");
+  const [subject, setSubject] = useState("");
+
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
+  //   emailjs
+  //     .sendForm(
+  //       "service_tfohcje",
+  //       "template_efi9ykh",
+  //       form.current,
+  //       "T2911MMHUGRXgWeKK"
+  //     )
+  //     .then(
+  //       () => {
+  //         setAlert("Email sent successfully");
+  //         setTimeout(() => {
+  //           setAlert(null);
+  //         }, 2000);
+  //       },
+  //       (error) => {
+  //         setAlert(error.text);
+  //         setTimeout(() => {
+  //           setAlert(null);
+  //         }, 2000);
+  //       }
+  //     );
+  // };
+  //   const showAlert=(message,type)=>{
+  // setAlert({me})
+  // }
+
+  const handlechange = (e) => {
+    const { name, value } = e.target;
+    if (name === "user_name") {
+      setName(value);
+    } else if (name === "user_email") {
+      setEmail(value);
+    } else if (name === "user_message") {
+      setMessage(value);
+    } else if (name === "user_mobile") {
+      setMobile(value);
+    } else if (name === "user_subject") {
+      setSubject(value);
+    }
+  };
+
+  const config = {
+    SecureToken: "11bdacf2-ce21-42d2-b9f8-c0746a71ce86",
+    To: "virtualschool@yopmail.com",
+    From: email,
+    Subject: `This is the subject ${subject}`,
+    Body: `Name: ${name} Email: ${email} Message: ${message} Mobile: ${mobile}`,
+  };
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_s419xnc",
-        "template_yo9fcix",
-        form.current,
-        "8gAx5c3B9hdKWhTMD"
-      )
-      .then(
+
+    if (window.Email) {
+      window.Email.send(config).then(
         () => {
+          console.log("Email sent successfully");
+
           setAlert("Email sent successfully");
           setTimeout(() => {
             setAlert(null);
@@ -30,43 +84,59 @@ const Contact = () => {
           }, 2000);
         }
       );
+    }
   };
-  //   const showAlert=(message,type)=>{
-  // setAlert({me})
-  //   }
 
   return (
     <>
+      <Header
+        icon={"fa fa-phone-volume"}
+        title={"Contact Us"}
+      />
       <div id="contact" className="contact">
         <RevealX direction={-100}>
           <div className="form">
             <h2 className="heading">
               Message <span>Us!</span>
             </h2>
-            <form ref={form} onSubmit={sendEmail}>
+            <form onSubmit={sendEmail}>
               <div className="input-box">
-                <input type="text" name="user_name" placeholder="Your Name" />
+                <input
+                  type="text"
+                  name="user_name"
+                  value={name}
+                  onChange={handlechange}
+                  placeholder="Your Name"
+                />
                 <input
                   type="email"
                   name="user_email"
+                  value={email}
+                  onChange={handlechange}
                   placeholder="Your Email"
                 />
               </div>
               <div className="input-box">
                 <input
-                  type="text"
-                  name="user_name"
+                  type="number"
+                  value={mobile}
+                  onChange={handlechange}
+                  name="user_mobile"
                   placeholder="Mobile  Number"
                 />
                 <input
                   type="text"
-                  name="user_email"
+                  name="user_subject"
+                  value={subject}
                   placeholder="Email Subject"
+                  onChange={handlechange}
                 />
               </div>
               <textarea
-                name="message"
+                name="user_message"
                 placeholder="Your Message"
+                value={message}
+                onChange={handlechange}
                 cols={20}
                 rows={5}
               />
@@ -74,9 +144,10 @@ const Contact = () => {
                 Send Message
               </button>
             </form>
+            <p className={`${alert ? "alert" : ""}`}>{alert}</p>
           </div>
         </RevealX>
-        <p className={`${alert ? "alert" : ""}`}>{alert}</p>
+
         <RevealX direction={100}>
           <div className="contact-info">
             <h2 className="heading">
@@ -90,7 +161,7 @@ const Contact = () => {
               <div className="contact-info-sub">
                 <h3>Office</h3>
                 <p>
-                  15B, Ratlam Kothi, Geeta Bhawan Square,
+                  14B, Ratlam Kothi, Geeta Bhawan Square,
                   <br /> Indore (M.P.), 452018
                 </p>
               </div>
@@ -123,11 +194,8 @@ const Contact = () => {
           </div>
         </RevealX>
       </div>
-      <div className="social">
-      
-        {/* <Social /> */}
-      </div>
-      
+      <div className="social">{/* <Social /> */}</div>
+
       <GoogleMap />
     </>
   );

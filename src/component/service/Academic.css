@@ -1,0 +1,77 @@
+/* School Academic Support Styles */
+.academic-support-container {
+    padding: 2rem 5%;
+    background-color: #f9f9f9;
+}
+
+.academic-support-container h1,
+.academic-support-container h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.academic-support-container p,
+.academic-support-container ul li {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.academic-support-container ul {
+    padding-left: 1.5rem;
+}
+
+.academic-support-container ul li {
+    list-style-type: disc;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .academic-support-container {
+        padding: 2rem 4%;
+    }
+
+    .academic-support-container h1,
+    .academic-support-container h2 {
+        font-size: 1.75rem;
+    }
+
+    .academic-support-container p,
+    .academic-support-container ul li {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .academic-support-container {
+        padding: 1.5rem 3%;
+    }
+
+    .academic-support-container h1,
+    .academic-support-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .academic-support-container p,
+    .academic-support-container ul li {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .academic-support-container {
+        padding: 1rem 5%;
+    }
+
+    .academic-support-container h1,
+    .academic-support-container h2 {
+        font-size: 1.4rem;
+    }
+
+    .academic-support-container p,
+    .academic-support-container ul li {
+        font-size: 0.85rem;
+    }
+}

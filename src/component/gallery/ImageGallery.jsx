@@ -3,14 +3,14 @@ import "./ImageGallery.css";
 
 import Header from "../general/Header";
 
-import img1 from "../../assets/image1.jpeg";
-import img2 from "../../assets/image2.jpeg";
-import img3 from "../../assets/image3.jpeg";
-import img4 from "../../assets/image4.jpeg";
-import img5 from "../../assets/image5.jpeg";
-import img6 from "../../assets/image6.jpeg";
-import img7 from "../../assets/image7.jpeg";
-import img8 from "../../assets/image8.jpeg";
+import img1 from "../../assets/gallery_image/image1.jpeg";
+import img2 from "../../assets/gallery_image/image2.jpeg";
+import img3 from "../../assets/gallery_image/image3.jpeg";
+import img4 from "../../assets/gallery_image/image4.jpeg";
+import img5 from "../../assets/gallery_image/image5.jpeg";
+import img6 from "../../assets/gallery_image/image6.jpeg";
+import img7 from "../../assets/gallery_image/image7.jpeg";
+import img8 from "../../assets/gallery_image/image8.jpeg";
 import { useState } from "react";
 
 const ImageGallery = () => {
@@ -34,7 +34,7 @@ const ImageGallery = () => {
   };
   return (
     <>
-      <Header Header link={"Home"} to={""} title={"Gallery"} />
+      <Header icon="fa-solid fa-images" title={"Gallery"} />
       <div className="gallery-container">
         {images.map((src, index) => (
           <motion.div

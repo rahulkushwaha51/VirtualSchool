@@ -1,65 +1,122 @@
 import "./Hero.css";
-
-// import Shufflegrid from "./Sufflegrid";
+// import Course from "./Courses";
+import { motion } from "framer-motion";
 import { RevealY } from "../../utility/Reveal";
 
-import img from "../../assets/choose-1.webp";
-import img2 from "../../assets/choose-2.jpeg";
-import img3 from "../../assets/choose-3.jpeg";
-import img4 from "../../assets/choose-4.jpeg";
-import img5 from "../../assets/choose-1.webp";
-import img6 from "../../assets/choose-3.jpeg";
-import { motion } from "framer-motion";
-import chooselog from "../../assets/choose-logo.jpg";
-import Marquee from "react-fast-marquee";
-const Hero = () => {
-  // const cardsData = [
-  //   {
-  //     iconClass: "fa-solid fa-globe",
-  //     title: "Future of Education",
-  //     description:
-  //       "A new world order post 2020, dictates a whole new outlook at its education system too.",
-  //     direction: "-100%",
-  //   },
-  //   {
-  //     iconClass: "fa-solid fa-leaf",
-  //     title: "Healthy Balance between Fun & Learning",
-  //     direction: "-100%",
-  //     description:
-  //       "All work and no play make children dull and dreary. We provide just the right balance between scholastic and co-scholastic areas.",
-  //   },
-  //   {
-  //     iconClass: "fa-solid fa-desktop",
-  //     title: "Flexible Learning",
-  //     direction: "100%",
-  //     description:
-  //       "Our online classes are conducted in the morning and evening batches. You can choose the batch that suits you best.",
-  //   },
-  //   {
-  //     iconClass: "fa-solid fa-address-book",
-  //     title: "Curated Curriculum",
-  //     direction: "100%",
-  //     description: "Our curriculum is tailor-made to forge tomorrow’s leaders.",
-  //   },
-  // ];
+import chooselog from "../../assets/home_image/choose-logo.jpg";
+import works from "../../assets/home_image/works.png";
+import features from "../../assets/home_image/features.png";
+import risk from "../../assets/home_image/risk.png";
+import whyus from "../../assets/home_image/school.gif";
+import trust from "../../assets/home_image/trust.png";
 
-  // const cardsData1 = [
-  //   {
-  //     iconClass: "fa-solid fa-globe",
-  //     title: "Integrity",
-  //     description: "Integrity is the soul of all virtue.",
-  //   },
-  //   {
-  //     iconClass: "fa-solid fa-leaf",
-  //     title: "Compassion",
-  //     description: "Compassion is the soul of all humanity.",
-  //   },
-  //   {
-  //     iconClass: "fa-solid fa-desktop",
-  //     title: "Excellence",
-  //     description: "Excellence at the heart of all human endeavors.",
-  //   },
-  // // ];
+import school1 from "../../assets/school_banner/school1.webp";
+import school2 from "../../assets/school_banner/school2.avif";
+import school3 from "../../assets/school_banner/school3.jpg";
+import school4 from "../../assets/school_banner/school4.jpg";
+import school5 from "../../assets/school_banner/school5.jpg";
+import school6 from "../../assets/school_banner/school6.jpg";
+import school7 from "../../assets/school_banner/school7.jpg";
+import school8 from "../../assets/school_banner/school8.png";
+import school9 from "../../assets/school_banner/school9.jpg";
+import school10 from "../../assets/school_banner/school10.png";
+import school11 from "../../assets/school_banner/school11.png";
+import school12 from "../../assets/school_banner/school12.png";
+
+import counselingImg from "../../assets/service/counseling.jpeg";
+import hostelImg from "../../assets/service/hostel.jpeg";
+import schoolAdmissionImg from "../../assets/service/admission.png";
+import mentor from "../../assets/service/mentor.jpg";
+import Olympiads from "../../assets/service/olympiad.jpg";
+import academic from "../../assets/service/academic.jpg";
+import workshop from "../../assets/service/workshop.jpg";
+import appsupport from "../../assets/app_image/app1.png";
+
+import Marquee from "react-fast-marquee";
+
+const Hero = () => {
+  const brand = [
+    school1,
+    school2,
+    school3,
+    school4,
+    school5,
+    school6,
+    school7,
+    school8,
+    school9,
+    school10,
+    school11,
+    school12,
+  ];
+
+  const servicesData = [
+    {
+      id: 0,
+      title: "School Admission",
+      description:
+        "Assistance with the entire school admission process from start to finish.",
+      img: schoolAdmissionImg,
+    },
+    {
+      id: 1,
+      title: "Counseling",
+      description:
+        "Expert guidance to help you navigate the complex admission process and secure your spot in top institutions.",
+      img: counselingImg,
+      link: "/counseling",
+    },
+    {
+      id: 2,
+      title: "Hostel Assistance",
+      description:
+        "We help you find the best hostel accommodations that suit your budget and needs, ensuring a comfortable stay.",
+      img: hostelImg,
+      link: "/hostel",
+    },
+    {
+      id: 3,
+      title: "VIRTUAL APP SUPPORT",
+      description:
+        "Virtual school app support refers to the technical and customer service assistance provided to users of a virtual school platform or app",
+      img:appsupport ,
+      link: "/virtual",
+    },
+    {
+      id: 4,
+      title: "WORKSHOP & SEMINAR FOR SCHOOL",
+      description:
+        "Workshops and seminars for schools are educational events designed to enhance students' learning, skills, and knowledge in various subjects or areas of interest.",
+      img: workshop,
+      link: "/scholarship",
+    },
+
+    {
+      id: 5,
+      title: "MENTOR EDUCATION",
+      description:
+        "Mentor education refers to the guidance provided by an experienced individual (mentor) to a less experienced person (mentee) in their academic or professional journey",
+      img: mentor,
+      link: "/scholarship",
+    },
+    {
+      id: 6,
+      title: "OLYMPAIDS SUPPORT",
+      description:
+        "Olympiads support helps students prepare for academic competitions by providing study materials, practice tests, specialized coaching, exam strategies, and motivational support",
+      img: Olympiads,
+      link: "/scholarship",
+    },
+    {
+      id: 7,
+      title: "SCHOOL ACADEMIC SUPPORT",
+      description:
+        "School academic support refers to the various services and resources provided to enhance students' learning experiences and academic performance",
+      img: academic,
+      link: "/scholarship",
+    },
+  ];
+
   const cardsData2 = [
     {
       icon: "fa-regular fa-hand-point-up",
@@ -98,44 +155,6 @@ const Hero = () => {
         "No charges were taken from 95% of our students. The remaining 5% paid for special customised services",
     },
   ];
-  const cardsData3 = [
-    {
-      img: img,
-      title: "One-on-one Counselling Sessions ",
-      description:
-        "One-on-one Counselling Sessions: Trained professionals will offer personalized guidance to students, helping them identify their interests, strengths, and career goals. ",
-    },
-    {
-      img: img2,
-      title: "Career Counselling Assessments ",
-      description:
-        "Utilizing reputable assessment tools, students will have the opportunity to assess their skills, interests, and values to determine suitable career paths",
-    },
-    {
-      img: img3,
-      title: "Academic Counselling ",
-      description:
-        "This focuses on helping students with educational planning, course selection, study skills, time management, and academic goal setting. ",
-    },
-    {
-      img: img4,
-      title: " Personal Development Counselling ",
-      description:
-        "Supports students in developing life skills, improving relationships, building self-esteem, and managing personal challenges.",
-    },
-    {
-      img: img5,
-      title: " Aptitude Tests ",
-      description:
-        "Evaluate specific skills or abilities related to particular tasks or fields, such as numerical, verbal, or abstract reasoning. ",
-    },
-    {
-      img: img6,
-      title: " Psychometric test  ",
-      description:
-        "Which are assessment design to measure psychological attributes like, Intelligent, personality traits, aptitudes and specific skills. This test aim to provide inside into an individual abilities performances and behavior ",
-    },
-  ];
 
   const buttonVarients = {
     hover: {
@@ -144,116 +163,69 @@ const Hero = () => {
     },
   };
 
-  const brand = [
-    img,
-    img2,
-    img3,
-    img4,
-    img5,
-    img6,
-    img,
-    img2,
-    img3,
-    img4,
-    img5,
-    img6,
-    img,
-    img2,
-    img3,
-    img4,
-    img5,
-    img6,
-    img6,
-    img6,
-    img6,
-    img6,
-  ];
-
   return (
     <>
-      {/* <div className="home">
-        <RevealX direction={"-100%"}>
-          <div className="home-intro">
-            <h2 className="gradient-text">Welcome To Virtual School</h2>
-            <p>
-              A brand-new world order coerces us to think differently and
-              re-think our ways of working, living and educating our future
-              generations. Welcome to Virtual School, the Virtual school!
-            </p>
-            <p>
-              Virtual School, in Sanskrit, denotes the harbinger of ambition and
-              desire. For your child, we present the right balance of a great
-              learning environment combined with the right values,
-              quintessential life skills and a safe, secure and exciting place
-              to blossom.
-            </p>
-            <p>
-              We are a 100% online school offering flexible batch timings,
-              choice of subjects, engaging curriculum, competitive fee structure
-              and personalised support to our students, which makes us the first
-              choice as top online schools in India. At Virtual School, we are
-              committed to provide our students everything they would get at a
-              traditional school and much beyond….
-            </p>
-          </div>
-        </RevealX>
-        <RevealX direction={"100%"}>
-          <Shufflegrid />
-        </RevealX>
-      </div> */}
+      <div className="brand-name-container">
+        <h2>
+          Our Partner <span>School</span>
+        </h2>
+        <div className="bottom-line bottom-line-second"></div>
+        <Marquee pauseOnHover={true} speed={80}>
+          {brand.map((item, index) => (
+            <div className="brand-name" key={index}>
+              <img
+                src={item}
+                alt={`Image ${index + 1}`}
+                key={index}
+                className="scroller-image"
+              />
+            </div>
+          ))}
+        </Marquee>
+        <h2>
+          Let’s share the pain of finding the best future for your children
+        </h2>
+        <p>
+          ‘Virtual School’ is the centralize portal for admission in the premier
+          education institutes in your town. Handover your admission concerns
+          and worries to us. We have designed an excellent tool to help you in
+          finding the best school in your town based on different parameters
+          such as facilities, faculty expertise, reviews and so on. What you
+          need to do is just submit requirements in above boxes and we will
+          display the best institutions. Then it’s just the matter of seconds to
+          select the school, filling the admission form and paying conveniently
+          to reserve your seat.
+        </p>
+      </div>
 
-      {/* <div className="benefit">
-        <RevealX direction={"-100%"}>
-          <h2 className="gradient-text">Benefits of Virtual School</h2>
-        </RevealX>
+      {/* <Course /> */}
 
-        <div className="card-grid">
-          {cardsData.map(
-            ({ iconClass, title, description, direction }, index) => (
-              <RevealX direction={direction} key={index}>
-                <motion.div
-                  className="card"
-                  key={index}
-                  whileHover={{ scale: 1.1, transition: { duration: 0.4 } }}
-                >
-                  <div className="card-icon">
-                    <i className={iconClass}></i>
-                  </div>
-                  <h3>{title}</h3>
-                  <p>{description}</p>
-                </motion.div>
-              </RevealX>
-            )
-          )}
+      {/* service */}
+
+      <div className="service">
+        <div className="heading">
+          <h2>
+            Our <span>Services</span>
+          </h2>
+          <div className="bottom-line bottom-line-second"></div>
         </div>
-      </div> */}
 
-      {/* <div className="values">
-        <RevealY direction={"-100%"}>
-          <h2 className="gradient-text">Our Core Values</h2>
-        </RevealY>
-
-        <div className="card-grid">
-          {cardsData1.map(
-            ({ iconClass, title, description, direction }, index) => (
-              <RevealY direction={direction} key={index}>
-                <motion.div
-                  className={`card ${index === 1 ? "special-card" : ""}`}
-                  key={index}
-                  variants={buttonVarients}
-                  whileHover="hover"
-                >
-                  <div className="card-icon">
-                    <i className={iconClass}></i>
-                  </div>
-                  <h3>{title}</h3>
-                  <p>{description}</p>
-                </motion.div>
-              </RevealY>
-            )
-          )}
+        <div className="service-grid">
+          {servicesData.map((service) => (
+            <div key={service.id} className="service-card">
+              <img
+                src={service.img}
+                alt={service.title}
+                className="service-img"
+              />
+              <h3 className="service-title">{service.title}</h3>
+              <p className="service-description">{service.description}</p>
+             
+            </div>
+          ))}
         </div>
-      </div> */}
+      </div>
+      {/* choose us */}
       <div className="choose-us">
         <div className="choose-us-section1">
           <div className="choose-us-logo">
@@ -275,7 +247,7 @@ const Hero = () => {
               ({ icon, title, description, direction }, index) => (
                 <RevealY direction={direction} key={index}>
                   <motion.div
-                    className='card'
+                    className="card"
                     key={index}
                     variants={buttonVarients}
                     whileHover="hover"
@@ -294,58 +266,111 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
-      <div className="service">
-        <RevealY direction={"-100%"}>
-          <div className="heading">
-            <h2>
-              Our <span>Counselling</span> Support
-            </h2>
-            <div className="bottom-line bottom-line-second"></div>
-          </div>
-        </RevealY>
-
-        <div className="card-grid">
-          {cardsData3.map(({ img, title, description, direction }, index) => (
-            <RevealY direction={direction} key={index}>
-              <motion.div
-                className={`card ${index === 1 ? "special-card" : ""}`}
-                key={index}
-                variants={buttonVarients}
-                whileHover="hover"
-              >
-                <div className="card-img">
-                  <img src={img} alt="" />
-                </div>
-                <div className="card-content">
-                  <h3>{title}</h3>
-                  <p>{description}</p>
-                </div>
-              </motion.div>
-            </RevealY>
-          ))}
+      <div className="works">
+        <img src={works} alt="vision" />
+        <div className="works-inner">
+          <h2>HOW IT WORKS ?</h2>
+          <ul>
+            <li>
+              SkoolAdmission is an official admission partner of premier
+              schools.
+            </li>
+            <li>
+              All the information on our page is authentic and provided by
+              schools.
+            </li>
+            <li>
+              Your submitted application is thoroughly checked and evaluated
+              byschool officials.
+            </li>
+            <li>
+              You will be notified once the decision is made on your registered
+              email id and mobile number.
+            </li>
+          </ul>
         </div>
       </div>
-      <div className="brand-name-container">
-        <div className="heading">
-          <h2>
-            Our <span>Partner</span> Institutions
-          </h2>
-          <div className="bottom-line bottom-line-second"></div>
-        </div>
 
-        <Marquee pauseOnHover={true} speed={80}>
-          {brand.map((item, index) => (
-            <div className="brand-name" key={index}>
-              <img
-                src={item}
-                alt={`Image ${index + 1}`}
-                key={index}
-                className="scroller-image"
-              />
-            </div>
-          ))}
-        </Marquee>
+      <div className="features">
+        <div className="features-inner">
+          <h2> FEATURES</h2>
+          <ul>
+            <li>Get the valuable insights with reviews.</li>
+            <li>Check the overview of all schools at a single stop.</li>
+            <li>Peek inside the school and facilities it provide.</li>
+            <li>Get benefits from counseling facility.</li>
+            <li>Say bye –bye to long queues.</li>
+            <li>Forms submitted in one go.</li>
+            <li>
+              No chaos of paper work. Soft copies of the required documents can
+              be easily attached with the form.
+            </li>
+            <li>
+              A form once filled, your database remains with us which can then
+              be used for filling another application form. This saves
+              duplication of effort.
+            </li>
+          </ul>
+        </div>
+        <img src={features} alt="mission" />
+      </div>
+
+      <div className="risk">
+        <img src={risk} alt="risk" />
+        <div className="risk-inner">
+          <h2> ELIMINATES RISK</h2>
+          <ul>
+            <li>
+              Online application prevents the risk of losing important
+              documents.
+            </li>
+            <li>
+              No third party intervention during the process, schools are
+              directly involved.
+            </li>
+            <li>
+              The queues are growing and SkoolAdmission is the ultimate
+              solution.
+            </li>
+
+            <li>Every information is authentic.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="why-us">
+        <div className="why-us-inner">
+          <h2>WHY Virtual School ?</h2>
+          <ul>
+            <li>
+              The revolutionary concept of online admission to schools has been
+              simplified by SkoolAdmission.
+            </li>
+            <li>
+              The hassles of students, teachers and parents are solved at the
+              same place.
+            </li>
+            <li>
+              With a holistic interface the portal provides easy admission
+              facilities
+            </li>
+            <li>Virtual School has made faster transfer of data viable.</li>
+          </ul>
+        </div>
+        <img src={whyus} alt="whyus" />
+      </div>
+      <div className="trust">
+        <img src={trust} alt="trust" />
+        <div className="trust-inner">
+          <h2>A WORD OF TRUST</h2>
+          <ul>
+            <li>
+              A venture of young VNIT innovators who have sensed the need and
+              stepped in with a robust and a lasting solution.
+            </li>
+            <li>We are always there to help you 24*7*365.</li>
+          </ul>
+        </div>
       </div>
     </>
   );

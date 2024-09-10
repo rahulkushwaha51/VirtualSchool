@@ -60,7 +60,7 @@
 .header {
     background-image: url("../../assets/header.png");
     background-color: var(--main-color);
-    padding: 12% 5%;
+
 }
 
 .modal-backdrop {

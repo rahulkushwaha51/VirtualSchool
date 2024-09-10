@@ -1,0 +1,98 @@
+/* Virtual App Support */
+.virtual-app-support-container {
+    padding: 2rem 5%;
+    background-color: #f9f9f9;
+}
+
+.virtual-app-support-container h1,
+.virtual-app-support-container h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.virtual-app-support-container p,
+.virtual-app-support-container li {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.feature-section h3 {
+    color: #444;
+    margin-top: 1.5rem;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.support-benefits ul,
+.feature-section ul {
+    padding-left: 1.5rem;
+}
+
+.support-benefits ul li,
+.feature-section ul li {
+    list-style-type: disc;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .virtual-app-support-container {
+        padding: 2rem 3%;
+    }
+
+    .virtual-app-support-container h1,
+    .virtual-app-support-container h2 {
+        font-size: 1.75rem;
+    }
+
+    .virtual-app-support-container p,
+    .virtual-app-support-container li {
+        font-size: 0.95rem;
+    }
+
+    .feature-section h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .virtual-app-support-container {
+        padding: 1.5rem 2%;
+    }
+
+    .virtual-app-support-container h1,
+    .virtual-app-support-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .virtual-app-support-container p,
+    .virtual-app-support-container li {
+        font-size: 0.9rem;
+    }
+
+    .feature-section h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .virtual-app-support-container {
+        padding: 1rem 5%;
+    }
+
+    .virtual-app-support-container h1,
+    .virtual-app-support-container h2 {
+        font-size: 1.4rem;
+    }
+
+    .virtual-app-support-container p,
+    .virtual-app-support-container li {
+        font-size: 0.85rem;
+    }
+
+    .feature-section h3 {
+        font-size: 1.1rem;
+    }
+}

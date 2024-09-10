@@ -2,21 +2,13 @@ import "./Home.css";
 import Hero from "./Hero";
 import { useEffect, useState } from "react";
 import Modal from "../modal/Modal";
-// import img from "../../assets/logo.jpeg";
-// import img2 from "../../assets/istockphoto.jpg";
-import heroImg from "../../assets/desktop.svg";
-import impactImg from "../../assets/Group.svg";
-import creative from "../../assets/005-creative.svg";
-import startup from "../../assets/007-startup.svg";
-import career from "../../assets/004-career.svg";
-import device from "../../assets/002-devices.svg";
-import certificate from "../../assets/003-certificate.svg";
-import team from "../../assets/010-team.svg";
-
-import left from "../../assets/left.svg";
-import right from "../../assets/right.svg";
+import heroImg from "../../assets/home_image/hero.jpeg";
+import impactImg from "../../assets/svg/Group.svg";
 import Testimonial from "../testimonial/Testimonial";
-import Course from "./Courses";
+
+import left from "../../assets/svg/left.svg";
+import right from "../../assets/svg/right.svg";
+
 // import Services from "../service/Service";
 
 const Home = () => {
@@ -32,7 +24,7 @@ const Home = () => {
     if (!isSessionFirstVisit) {
       const timer = setTimeout(() => {
         setOpen(true);
-      }, 3000);
+      }, 30000);
       sessionStorage.setItem("isSessionFirstVisit", "true");
       return () => clearTimeout(timer);
     }
@@ -46,7 +38,9 @@ const Home = () => {
           Make smart decisions with our revolutionary AI enabled career guidance
           tools and expert career counsellors
         </p>
-        <button className="btn" onClick={() => setOpen(true)}>Get Started</button>
+        <button className="btn" onClick={() => setOpen(true)}>
+          Get Started
+        </button>
 
         <p>
           Career Assesment | Personalised Guidence | Profile Building | Virtual
@@ -64,29 +58,29 @@ const Home = () => {
         <div className="impact-row">
           <img src={impactImg} alt="" />
           <div className="impact-col">
-            <h2>2.5 Lakh+</h2>
-            <p>Students Impacted</p>
+            <h2>50+</h2>
+            <p>Partner Schools</p>
           </div>
         </div>
         <div className="impact-row">
           <img src={impactImg} alt="" />
           <div className="impact-col">
-            <h2>2.5 Lakh+</h2>
-            <p>Students Impacted</p>
+            <h2>15k+</h2>
+            <p>Students Enrolled</p>
           </div>
         </div>
         <div className="impact-row">
           <img src={impactImg} alt="" />
           <div className="impact-col">
-            <h2>2.5 Lakh+</h2>
-            <p>Students Impacted</p>
+            <h2>100k+ </h2>
+            <p>Students Counselled</p>
           </div>
         </div>
         <div className="impact-row">
           <img src={impactImg} alt="" />
           <div className="impact-col">
-            <h2>2.5 Lakh+</h2>
-            <p>Students Impacted</p>
+            <h2>10+ years</h2>
+            <p>Experience</p>
           </div>
         </div>
       </div>
@@ -121,195 +115,11 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="career-guidance">
-        <h2>Shaping the Career Guidance Landscape</h2>
-        <p>
-          Comprehensive career guidance solutions for students, parents,
-          educators and schools
-        </p>
-        <div className="career-guidance-grid">
-          <div className="card">
-            <img src={creative} alt="creative" />
-            <p>
-              Enable students to identify their best-fit career with our
-              world-class career assessment and personalised guidance.
-            </p>
-          </div>
-          <div className="card">
-            <img src={device} alt="devices" />
-            <p>
-              Empower students to learn all about the professional world with
-              virtual career simulations, exhaustive career library, career
-              blogs and vlogs.
-            </p>
-          </div>
-          <div className="card">
-            <img src={certificate} alt="certificate" />
-            <p>
-              Pave student’s way to their dream college with our end-to-end
-              college application guidance, scholarship drive and corporate
-              internship program.
-            </p>
-          </div>
-        </div>
-        <div className="career-guidance-grid">
-          <div className="card">
-            <img src={career} alt="career" />
-            <p>
-              Enable schools in creating a career guidance ecosystem in sync
-              with the vision of New Education Policy
-            </p>
-          </div>
-          <div className="card">
-            <img src={team} alt="team" />
-            <p>
-              Empower educators to become International Certified Career Coaches
-              and build a career in career guidance & counselling
-            </p>
-          </div>
-          <div className="card">
-            <img src={startup} alt="startup" />
-            <p>
-              Revolutionary assessment platform and technology driven career
-              guidance solutions for educators to boost their career guidance &
-              counselling practice
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* <Services /> */}
-
-      {/* <div className="home-partner">
-        <h2>Our Partner Institutions</h2>
-
-        <div className="home-partner-button">
-          <button
-            className={`btn-secondry ${active === "School" ? "active" : ""}`}
-            onClick={() => setActive("School")}
-          >
-            250+ Partner Schools{" "}
-          </button>
-          <button
-            className={`btn-secondry ${active === "College" ? "active" : ""}`}
-            onClick={() => setActive("College")}
-          >
-            50+ Partner Colleges{" "}
-          </button>
-        </div>
-
-        {active === "School" && (
-          <div className="partner-school-grid">
-            <div className="card">
-              <img src={img} alt="" />
-              <p>Prestige Universities</p>
-            </div>
-            <div className="card">
-              <img src={img} alt="" />
-              <p>Prestige Universities</p>
-            </div>
-            <div className="card">
-              <img src={img} alt="" />
-              <p>Prestige Universities</p>
-            </div>
-            <div className="card">
-              <img src={img} alt="" />
-              <p>Prestige Universities</p>
-            </div>
-            <div className="card">
-              <img src={img} alt="" />
-              <p>Prestige Universities</p>
-            </div>
-            <div className="card">
-              <img src={img} alt="" />
-              <p>Prestige Universities</p>
-            </div>
-            <div className="card">
-              <img src={img} alt="" />
-              <p>Prestige Universities</p>
-            </div>
-            <div className="card">
-              <img src={img} alt="" />
-              <p>Prestige Universities</p>
-            </div>
-            <div className="card">
-              <img src={img} alt="" />
-              <p>Prestige Universities</p>
-            </div>
-            <div className="card">
-              <img src={img} alt="" />
-              <p>Prestige Universities</p>
-            </div>
-            <div className="card">
-              <img src={img} alt="" />
-              <p>Prestige Universities</p>
-            </div>
-            <div className="card">
-              <img src={img} alt="" />
-              <p>Prestige Universities</p>
-            </div>
-          </div>
-        )}
-        {active === "College" && (
-          <div className="partner-school-grid">
-            <div className="card">
-              <img src={img2} alt="" />
-              <p>Prestige Universities</p>
-            </div>
-            <div className="card">
-              <img src={img2} alt="" />
-              <p>Prestige Universities</p>
-            </div>
-            <div className="card">
-              <img src={img2} alt="" />
-              <p>Prestige Universities</p>
-            </div>
-            <div className="card">
-              <img src={img2} alt="" />
-              <p>Prestige Universities</p>
-            </div>
-            <div className="card">
-              <img src={img2} alt="" />
-              <p>Prestige Universities</p>
-            </div>
-            <div className="card">
-              <img src={img2} alt="" />
-              <p>Prestige Universities</p>
-            </div>
-            <div className="card">
-              <img src={img2} alt="" />
-              <p>Prestige Universities</p>
-            </div>
-            <div className="card">
-              <img src={img2} alt="" />
-              <p>Prestige Universities</p>
-            </div>
-            <div className="card">
-              <img src={img2} alt="" />
-              <p>Prestige Universities</p>
-            </div>
-            <div className="card">
-              <img src={img2} alt="" />
-              <p>Prestige Universities</p>
-            </div>
-            <div className="card">
-              <img src={img2} alt="" />
-              <p>Prestige Universities</p>
-            </div>
-            <div className="card">
-              <img src={img2} alt="" />
-              <p>Prestige Universities</p>
-            </div>
-          </div>
-        )}
-      </div> */}
 
       <Hero />
       {open && <Modal open={open} close={closeHandler} />}
 
       <Testimonial />
-
-      <Course />
     </div>
   );
 };

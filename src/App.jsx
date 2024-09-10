@@ -1,25 +1,45 @@
-
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Contact from "./component/contact/Contact";
 import { AnimatePresence } from "framer-motion";
 import About from "./component/about/About";
 // import Background from "./utility/Background";
-import Services from "./component/service/Service";
+
 import ImageGallery from "./component/gallery/ImageGallery";
 import Hero from "./component/Home/Hero";
+import Admissions from "./component/counseling/Admission";
+import IItJeeCounselling from "./component/counseling/IItJeeCounseling";
+import MentorEducation from "./component/service/MentorEdu";
+import VirtualAppSupport from "./component/service/VirtualApp";
+import WorkshopSeminar from "./component/service/Workshop";
+import AcademicSupport from "./component/service/Academic";
+
+import Programs from "./component/service/Program";
+import CareerCounseling from "./component/counseling/CareerCounselling";
+import CollegeCounseling from "./component/counseling/CollegeCounseling";
+import MobileApp from "./component/myapp/Myapp";
 function App() {
   return (
     <>
       <AnimatePresence mode="wait">
-          <Routes>
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/hero" element={<Hero />} />
+        <Routes>
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/hero" element={<Hero />} />
 
-            <Route path="/service" element={<Services />} />
-            <Route path="/gallery" element={<ImageGallery />} />
-          </Routes>
+          <Route path="/admission" element={<Admissions />} />
+          <Route path="/iitjee" element={<IItJeeCounselling />} />
+          <Route path="/careercounseling" element={<CareerCounseling />} />
+          <Route path="/collegecounseling" element={<CollegeCounseling />} />
+
+          <Route path="/mentor" element={<MentorEducation />} />
+          <Route path="/virtual" element={<VirtualAppSupport />} />
+          <Route path="/workshop" element={<WorkshopSeminar />} />
+          <Route path="/academic" element={<AcademicSupport />} />
+          <Route path="/program" element={<Programs />} />
+          <Route path="/app" element={<MobileApp />} />
+          <Route path="/gallery" element={<ImageGallery />} />
+        </Routes>
       </AnimatePresence>
     </>
   );

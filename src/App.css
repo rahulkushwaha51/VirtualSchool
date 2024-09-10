@@ -22,6 +22,7 @@
     --fade-color: rgb(136, 136, 136);
     ;
     --border-color: rgba(0, 0, 0, 0.3);
+    --color-dark-orange: rgb(192, 53, 55);
 }
 
 /* html {
@@ -81,23 +82,37 @@ span {
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    padding: 6rem 10%;
+    padding: 6rem 10% 1rem;
     color: white;
+    text-align: center;
 }
 
 .header h1 {
-    font-size: 3rem;
-    font-weight: bolder;
+    position: relative;
+    font-size: 2.5rem;
+    font-weight: 600;
     color: white;
 }
 
-.header a,
-.header span {
-    color: white;
-    padding: 0 .1rem;
+.header h1::after {
+    content: "";
+    position: absolute;
+    width: 10rem;
+    height: .4rem;
+    left: calc(50% - 5rem);
+    bottom: -.5rem;
+    background-color: white;
+    border-radius: .5rem;
 }
 
-.bottom-line{
+.header i {
+    font-size: 4rem;
+    color: white;
+}
+
+
+
+.bottom-line {
     padding: .5rem 0;
 }
 
@@ -106,7 +121,7 @@ span {
     position: absolute;
     width: 6rem;
     height: .2rem;
-    left: 0;
+    left: calc(50% - 3rem);
     background-color: rgb(192, 53, 55);
     border-radius: .5rem;
 }
@@ -116,20 +131,21 @@ span {
     position: absolute;
     width: 2rem;
     height: .5rem;
-    left: 1rem;
+    left: calc(50% - 1rem);
     margin-top: -2px;
     background-color: rgb(192, 53, 55);
     border-radius: .5rem;
 }
 
-.heading{
+.heading {
     position: relative;
     text-wrap: wrap;
 }
 
-.heading h2{
-    text-align: left;
+.heading h2 {
+    text-align: center;
 }
+
 @media (max-width: 720px) {
 
     section {

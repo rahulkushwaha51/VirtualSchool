@@ -1,0 +1,193 @@
+.mobile-app-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem 5%;
+  gap: 5rem;
+  background-color: white;
+  font-family: Arial, sans-serif;
+  /* flex-wrap: wrap; */
+  /* Allows wrapping on smaller screens */
+}
+
+.section2 {
+  width: 100%;
+  height: auto;
+  background-image: url("../../assets/app_image/app2.png");
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-color: red;
+}
+
+.app-info {
+  max-width: 50%;
+}
+
+.app-info h1 {
+  font-size: 3rem;
+  color: #000;
+}
+
+.app-info h2 {
+  position: relative;
+  font-size: 3.5rem;
+  color: #000;
+}
+
+.app-info h2::after {
+  content: "";
+  display: block;
+  width: 10rem;
+  height: 5px;
+  background-color: #10bedd;
+  margin-top: 0.5rem;
+}
+
+.app-info h3 {
+  color: #10bedd;
+  font-size: 2rem;
+  margin-top: 1.5rem;
+}
+
+.app-info h1 span {
+  color: #3366FF;
+}
+
+.app-info p {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 1.5rem 0;
+}
+
+.app-info ul {
+  padding: 2rem 1rem;
+}
+
+.app-info ul li {
+  padding: 0.5rem 0;
+  list-style: disc;
+}
+
+
+.app-image img {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  /* border-radius: 5%; */
+  /* overflow: hidden; */
+}
+
+.bg-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: hidden;
+}
+
+.overlay-image {
+  position: absolute;
+  top: 14%;
+  left: 29%;
+  width: 209px;
+  height: auto;
+  /* z-index: 10; */
+  overflow: hidden;
+  border-radius: 5%;
+
+}
+
+.advantages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.advantages .card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 1rem;
+  width: calc(50% - 1rem);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.advantages .card .number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3366FF;
+}
+
+.advantages.card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.advantages .card ul li {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .mobile-app-section {
+    padding: 2rem 2%;
+    gap: 2rem;
+  }
+
+  .app-info {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .app-info h1 {
+    font-size: 2.5rem;
+  }
+
+  .app-info h2 {
+    font-size: 2rem;
+  }
+
+  .app-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .app-image img {
+    max-width: 350px;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-app-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .app-info h1 {
+    font-size: 2.2rem;
+  }
+
+  .app-info h2 {
+    font-size: 1.8rem;
+  }
+
+  .app-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .app-image img {
+    width: 100%;
+  }
+
+  .advantages .card {
+    width: 100%;
+  }
+}
+

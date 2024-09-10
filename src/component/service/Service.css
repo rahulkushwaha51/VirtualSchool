@@ -1,130 +1,108 @@
-.header {
-    background-color: var(--main-color);
+/* Admission */
+.admissions-container {
+    padding: 2rem 5%;
+    background-color: #f9f9f9;
 }
 
-.services-container {
-    width: 100%;
-    min-height: 100%;
-    padding: 4rem 5%;
-}
-
-.services-container h2 {
-    /* text-align: center; */
-    margin-bottom: 40px;
-    color: var(--text-color);
-    font-size: 24px;
-    font-weight: 600;
-
-}
-
-.services-container .benefit {
-    width: 100%;
-    background-color: var(--bg-second);
-}
-
-.benefit .card-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    padding: 2rem 3%;
-}
-
-.benefit .card {
-    width: 100%;
-    height: 10rem;
-    background-color: var(--bg-color);
-    border-radius: .5rem;
-    padding: 1rem;
-}
-
-.benefit .card h3 {
-    font-size: 1.3rem;
-    font-weight: 700;
-}
-
-.benefit .card p {
-    font-size: 1rem;
-    color: var(--text-color);
-}
-
-.service-section {
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 4rem;
-    text-align: left;
-}
-
-.service-section img {
-    width: 50%;
-    height: 30rem;
-    border-radius: .5rem;
-}
-
-.service-section div {
-    width: 50%;
-    border-radius: .5rem;
-    text-align: left;
-}
-
-.service-section h2 {
+.admissions-container h1,
+.admissions-container h2 {
     color: #333;
-    margin-bottom: 10px;
-    font-size: 2rem;
-    color: var(--main-color);
-    text-align: left;
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+    font-weight: bold;
 }
 
-.service-section p {
-    font-size: 16px;
-    margin-bottom: 10px;
-    color: #000;
+.admissions-container p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    text-align: justify;
 }
 
-.service-section ul {
-    list-style-type: none;
+.admissions-container ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
 }
 
-.service-section div ul li {
-    margin-bottom: 5px;
-    font-size: 1.4rem;
-    color: var(--text-color);
+.admissions-container li {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1rem;
 }
 
-@media (max-width: 768px) {
+.admissions-container ul li {
+    margin-bottom: 0.8rem;
+}
 
-    .services-container {
+/* Specific section styling for better layout and readability */
+.admissions-container .board-differences,
+.admissions-container .admission-criteria,
+.admissions-container .personalized-counseling,
+.admissions-container .application-support,
+.admissions-container .benefits-counseling {
+    margin-bottom: 2.5rem;
+}
+
+.admissions-container h2 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .admissions-container {
         padding: 2rem 4%;
     }
 
-    .service-section {
-        flex-direction: column;
-        margin: 0;
-
+    .admissions-container h1,
+    .admissions-container h2 {
+        font-size: 1.9rem;
     }
 
-    .benefit .card-grid {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 2rem;
-        padding: 2rem 3%;
+    .admissions-container p {
+        font-size: 1rem;
     }
 
-    /* .service-section:nth-of-type(1) {
-        flex-direction: column-reverse;
-    } */
+    .admissions-container ul li {
+        font-size: 0.95rem;
+    }
+}
 
-    .service-section-reverse {
-        flex-direction: column-reverse;
+@media (max-width: 768px) {
+    .admissions-container {
+        padding: 1.5rem 3%;
     }
 
-    .service-section img {
-        width: 100%;
-        height: 30rem;
+    .admissions-container h1,
+    .admissions-container h2 {
+        font-size: 1.7rem;
     }
 
-    .service-section div {
-        width: 100%;
+    .admissions-container p {
+        font-size: 0.95rem;
+    }
+
+    .admissions-container ul li {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .admissions-container {
+        padding: 1.5rem 5%;
+    }
+
+    .admissions-container h1,
+    .admissions-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .admissions-container p {
+        font-size: 0.9rem;
+    }
+
+    .admissions-container ul li {
+        font-size: 0.85rem;
     }
 }

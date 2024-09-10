@@ -70,16 +70,6 @@
     padding: 1rem;
 }
 
-/* .values .special-card {
-    background-color: var(--main-color);
-} */
-
-
-
-/* .card:hover{
-    transform: scale(1.1);
-    transition: all .5s ease-in-out;
-} */
 
 .card h3 {
     font-size: 1.7rem;
@@ -145,7 +135,7 @@
     font-size: 2.5rem;
     color: var(--text-color);
     font-weight: 600;
-    text-align: left;
+    /* text-align: left; */
 }
 
 .choose-us .card-grid {
@@ -199,7 +189,7 @@
 .service h2 {
     font-size: 2rem;
     color: var(--text-color);
-    text-align: left;
+    /* text-align: left; */
     /* padding: 0 3%; */
 }
 
@@ -226,7 +216,7 @@
 
 .service .card-img img {
     width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: 0.5rem 0.5rem 0 0;
 }
 
@@ -250,16 +240,22 @@
 .brand-name-container {
     position: relative;
     width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
     background: #f0f0f0;
-    display: inline-block;
     padding: 2rem 5%;
+    text-align: center;
 }
 
 .brand-name-container h2 {
-    font-size: 2rem;
-    text-align: left;
+    font-size: 1.4rem;
+    padding: 1rem 0;
+    font-weight: 600;
+    text-align: center;
+    color: var(--fade-color);
+}
+
+.brand-name-container p {
+    text-align: center;
+    color: var(--fade-color);
 }
 
 .brand-name {
@@ -280,53 +276,282 @@
 }
 
 
-/* Ensure the grid is responsive */
-@media (max-width: 1024px) {
-    .service .card-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.works,
+.features,
+.risk,
+.why-us,
+.trust {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    padding: 2rem 5%;
+    padding-top: 5rem;
+    gap: 10rem;
+    background-color: rgb(93 202 157);
+    color: var(--bg-color);
 }
 
-@media (max-width:768px) {
+.features {
+    background-color: rgb(243 204 12);
+}
+
+.risk {
+    background-color: rgb(234 86 68);
+}
+
+
+.why-us {
+    background-color: rgb(126 179 226);
+}
+
+.trust {
+    background-color: rgb(80 207 32);
+}
+
+.works img,
+.features img,
+.risk img,
+.why-us img,
+.trust img {
+    width: 40%;
+}
+
+.works-inner h2,
+.features-inner h2,
+.risk-inner h2,
+.why-us-inner h2,
+.trust-inner h2 {
+    font-size: 2.5rem;
+    text-align: left;
+    padding-bottom: 3rem;
+}
+
+.works-inner li,
+.features-inner li,
+.risk-inner li,
+.why-us-inner li,
+.trust-inner li {
+    margin-bottom: 1rem;
+    list-style: disc;
+    text-align: left;
+    font-size: 1.2rem;
+    padding: .5rem;
+    width: 70%;
+}
+
+
+
+.features-inner li {
+    width: 100%;
+}
+
+/* service */
+.service {
+    background-color: var(--bg-second);
+    padding: 2rem 5%;
+}
+
+.heading h2 {
+    font-size: 2rem;
+    /* text-align: left; */
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.heading .bottom-line {
+    width: 50px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: var(--bg-card);
+    text-align: center;
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1rem;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.service-img {
+    width: auto;
+    height: 12rem;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 0.5rem;
+}
+
+.service-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.service-description {
+    font-size: 1rem;
+    color: #555;
+}
+
+.read-more-link {
+    color: var(--color-dark-orange);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+
+}
+
+@media (max-width: 1024px) {
     .home {
         grid-template-columns: 1fr;
+        padding: 5rem 3%;
+    }
+
+    .home-intro h2 {
+        font-size: 3.5rem;
+        line-height: 4.5rem;
+    }
+
+    .home-intro p {
+        font-size: 1.1rem;
+    }
+
+    .benefit h2,
+    .values h2,
+    .choose-us h2 {
+        font-size: 2.5rem;
     }
 
     .card-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 
     .values .card-grid {
         grid-template-columns: 1fr;
     }
 
+    .values .card {
+        height: auto;
+    }
+
+    .choose-us {
+        grid-template-columns: 1fr;
+        padding: 2rem 3%;
+    }
+
+    .choose-us-section1 img {
+        width: 100%;
+    }
+
     .choose-us .card-grid {
         grid-template-columns: 1fr;
     }
 
+    .works,
+    .features,
+    .risk,
+    .why-us,
+    .trust {
+        padding: 2rem 2%;
+        gap: 1rem;
+    }
+
+    .works-inner li,
+    .features-inner li,
+    .risk-inner li,
+    .why-us-inner li,
+    .trust-inner li {
+       
+        width: 100%;
+    }
+    .service-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .service .card {
+        width: 100%;
+    }
+
+    .brand-name img {
+        width: 7rem;
+        height: 7rem;
+    }
+}
+
+@media (max-width:768px) {
+
     .choose-us {
-        display: flex;
-        justify-content: center;
-    }
-
-    .choose-us-section1 {
-        display: none;
-    }
-
-    .choose-us .card{
-        padding: 1rem 0;
-    }
-
-    .choose-us .card .card-icon i {
-        width: 3rem;
-    }
-
-    .choose-us .card-grid{
-        padding: 0;
-        gap: 0;
-    }
-
-    .service .card-grid {
         grid-template-columns: 1fr;
     }
+
+    .choose-us .card {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .works,
+    .features,
+    .risk,
+    .why-us,
+    .trust {
+        flex-direction: column;
+        margin: 0;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .features,
+    .why-us {
+        flex-direction: column-reverse;
+    }
+
+    .works img,
+    .features img,
+    .risk img,
+    .why-us img,
+    .trust img {
+        width: 100%;
+    }
+
+    .works-inner h2,
+    .features-inner h2,
+    .risk-inner h2,
+    .why-us-inner h2,
+    .trust-inner h2 {
+        font-size: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    .works-inner li,
+    .features-inner li,
+    .risk-inner li,
+    .why-us-inner li,
+    .trust-inner li {
+        width: 100%;
+        padding: 0;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .service-card {
+        width: 100%;
+    }
+
 }

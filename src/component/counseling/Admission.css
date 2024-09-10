@@ -1,0 +1,108 @@
+/* Admission */
+.admissions-container {
+  padding: 2rem 5%;
+  background-color: #f9f9f9;
+}
+
+.admissions-container h1,
+.admissions-container h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.admissions-container p {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+.admissions-container ul {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.admissions-container li {
+  color: #555;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.admissions-container ul li {
+  margin-bottom: 0.8rem;
+}
+
+/* Specific section styling for better layout and readability */
+.admissions-container .board-differences,
+.admissions-container .admission-criteria,
+.admissions-container .personalized-counseling,
+.admissions-container .application-support,
+.admissions-container .benefits-counseling {
+  margin-bottom: 2.5rem;
+}
+
+.admissions-container h2 {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .admissions-container {
+      padding: 2rem 4%;
+  }
+
+  .admissions-container h1,
+  .admissions-container h2 {
+      font-size: 1.9rem;
+  }
+
+  .admissions-container p {
+      font-size: 1rem;
+  }
+
+  .admissions-container ul li {
+      font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .admissions-container {
+      padding: 1.5rem 3%;
+  }
+
+  .admissions-container h1,
+  .admissions-container h2 {
+      font-size: 1.7rem;
+  }
+
+  .admissions-container p {
+      font-size: 0.95rem;
+  }
+
+  .admissions-container ul li {
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .admissions-container {
+      padding: 1.5rem 5%;
+  }
+
+  .admissions-container h1,
+  .admissions-container h2 {
+      font-size: 1.5rem;
+  }
+
+  .admissions-container p {
+      font-size: 0.9rem;
+  }
+
+  .admissions-container ul li {
+      font-size: 0.85rem;
+  }
+}
