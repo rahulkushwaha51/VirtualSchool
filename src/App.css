@@ -13,13 +13,13 @@
 }
 
 :root {
-    --bg-color: rgb(255, 255, 255);
+    --bg-color:white;
     --bg-second: rgb(240, 237, 237);
-    --main-color: rgb(0, 59, 93);
-    --main-color-second: rgb(205, 239, 255);
+    --primary-color: #2572e2;
+    --secondry-color: rgb(6, 169, 245);
     --text-color: rgb(0, 0, 0);
-    --text-color-second: rgb(0, 127, 182);
-    --fade-color: rgb(136, 136, 136);
+    --text-color-second: rgb(7, 155, 228);
+    --fade-color:rgba(39, 38, 38, 0.833);
     ;
     --border-color: rgba(0, 0, 0, 0.3);
     --color-dark-orange: rgb(192, 53, 55);
@@ -48,7 +48,7 @@ span {
 .btn {
     display: inline-block;
     padding: 1rem 2.8rem;
-    background: var(--main-color);
+    background: var(--primary-color);
     border-radius: 4rem;
     box-shadow: 0 0 1rem var(--main-color);
     font-size: 1.6rem;
@@ -74,16 +74,10 @@ span {
 }
 
 .header {
-    background-color: rgba(13, 14, 13, 0.724);
-    background-image: url("./component/assets/coursepageimage.jpg");
-    background-blend-mode: multiply;
-    object-fit: cover;
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
     width: 100%;
     padding: 6rem 10% 1rem;
     color: white;
+    background: linear-gradient(to right, rgba(152, 17, 17, 0.5), rgba(0, 0, 0, 0.5));
     text-align: center;
 }
 
@@ -144,12 +138,19 @@ span {
 
 .heading h2 {
     text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
 }
 
 @media (max-width: 720px) {
 
     section {
         padding: 2rem 3% 2rem;
+    }
+
+    .header {
+        padding: 6rem 3% 1rem;
+        text-wrap: wrap;
     }
 
 }

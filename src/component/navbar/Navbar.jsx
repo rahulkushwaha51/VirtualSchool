@@ -19,36 +19,46 @@ const Navbar = () => {
       link: "About Us",
       path: "about",
     },
-    {
-      id: 3,
-      link: "Gallery",
-      path: "gallery",
-    },
-    {
-      id: 4,
-      link: "Get Our App",
-      path: "app",
-    },
+
     {
       id: 5,
       link: "Counseling",
       subLinks: [
         { id: 1, link: "School Admission Counseling", path: "admission" },
-        { id: 2, link: "College Admission Counseling", path: "collegecounseling" },
+        {
+          id: 2,
+          link: "College Admission Counseling",
+          path: "collegecounseling",
+        },
         { id: 3, link: "Career Counseling", path: "careercounseling" },
-        { id: 4, link: "IIT/JOSAA/NEET/CLAT Counseling", path: "iitjee" },
+        { id: 4, link: "IIT/JOSAA/NEET/CLAT Counseling", path: "entrance" },
       ],
     },
+
     {
       id: 6,
       link: "Services",
       subLinks: [
         { id: 1, link: "Workshop & Seminar Support", path: "workshop" },
         { id: 2, link: "Virtual App Support", path: "virtual" },
-        { id: 3, link: "Mentor Education", path: "mentor" },
         { id: 4, link: "Academic Support", path: "academic" },
-        { id: 5, link: "School Intern Program & Channel Partner", path: "program" },
+        {
+          id: 5,
+          link: "School Intern Program & Channel Partner",
+          path: "program",
+        },
       ],
+    },
+    {
+      id: 3,
+      link: "Gallery",
+      path: "gallery",
+    },
+
+    {
+      id: 4,
+      link: "Get Our App",
+      path: "getapp",
     },
     {
       id: 7,
@@ -59,10 +69,12 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setActive(!active);
+    if (activeSubmenu) setActiveSubmenu(null);
   };
 
   const handleSetActive = (to) => {
     setActiveLink(to);
+    toggleMenu();
     setActiveSubmenu(null); // Close submenu when a main link is clicked
   };
 
@@ -87,31 +99,38 @@ const Navbar = () => {
           onClick={toggleMenu}
         ></div>
         <nav className={`navbar ${active ? "active" : ""}`}>
-          <ul className={`menu ${active ? "active" : ""}`}>
+          <menu className={`menu ${active ? "active" : ""}`}>
             {links.map(({ id, link, path, subLinks }) => (
-              <li key={id} className={`link ${activeLink === path ? "active" : ""}`}>
-                <div
-                  className="link-content"
-                  onClick={() => (subLinks ? toggleSubmenu(id) : handleSetActive(path))}
+              <li key={id} className={`link `}>
+                <Link
+                  to={path}
+                  onClick={() =>
+                    subLinks ? toggleSubmenu(id) : handleSetActive(path)
+                  }
                 >
-                  <Link to={path}>
-                    {link} {subLinks && <b>⟩</b>}
-                  </Link>
-                </div>
+                  {link} {subLinks && <b>⟩</b>}
+                </Link>
+
                 {subLinks && (
-                  <ul className={`submenu ${activeSubmenu === id ? "active" : ""}`}>
-                    {subLinks.map(({ id: subId, link: subLink, path: subPath }) => (
-                      <li key={subId} className="sublink">
-                        <Link to={subPath} onClick={toggleMenu}>
-                          {subLink}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+                  <menu
+                    className={`submenu ${
+                      activeSubmenu === id ? "active" : ""
+                    }`}
+                  >
+                    {subLinks.map(
+                      ({ id: subId, link: subLink, path: subPath }) => (
+                        <li key={subId} className="sublink">
+                          <Link to={subPath} onClick={toggleMenu}>
+                            {subLink}
+                          </Link>
+                        </li>
+                      )
+                    )}
+                  </menu>
                 )}
               </li>
             ))}
-          </ul>
+          </menu>
         </nav>
       </header>
     </>

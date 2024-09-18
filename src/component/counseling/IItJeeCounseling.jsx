@@ -6,7 +6,7 @@ const Counseling = () => {
     <>
       <Header
         icon={"fa fa-graduation-cap"}
-        title={"IIT/JOSAA/NEET/CLAT Counseling"}
+        title={"IIT JOSAA NEET CLAT Counseling"}
       />
       <div className="counseling-container">
         {/* IIT Counseling Section */}

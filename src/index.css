@@ -1,0 +1,95 @@
+.autoRotate {
+    animation: autoRotate;
+    animation-timeline: view();
+}
+
+@keyframes autoRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.autoShow {
+    animation: autoShow both;
+    animation-timeline: view(70% 5%);
+}
+
+@keyframes autoShow {
+    from {
+        opacity: 0;
+        transform: translateY(200px) scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.autoBlur {
+    animation: autoBlur linear both;
+    animation-timeline: view();
+}
+
+@keyframes autoBlur {
+    0% {
+        filter: blur(40px);
+    }
+
+    45%,
+    55% {
+        filter: blur(0px);
+    }
+
+    100% {
+        filter: blur(40px);
+    }
+}
+
+
+.autoTranslate {
+    animation: autoTranslate linear both;
+    animation-timeline: scroll();
+    transition: animation 0.5s ease-in-out;
+}
+
+@keyframes autoTranslate {
+    from {
+        transform: translateX(200px) scale(0.5);
+    }
+
+    to {
+        transform: translateX(0) scale(1);
+    }
+}
+
+.autoScale {
+    animation: autoScale 2s linear both infinite;
+    /* animation-delay: 1s; */
+    transition: animation 0.5s ease-in-out;
+}
+
+@keyframes autoScale {
+    0% {
+        transform: scale(0.9);
+        /* background: var(--primary-color); */
+        background: linear-gradient(to right, #00a0ff, #82a0b1);
+        filter: brightness(0.9);
+    }
+
+    50% {
+        transform: scale(1.05);
+        background: linear-gradient(to right, #00a0ff, #82a0b1);
+        filter: brightness(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+        background: linear-gradient(to right, #00a0ff, #82a0b1);
+        filter: brightness(1);
+    }
+}

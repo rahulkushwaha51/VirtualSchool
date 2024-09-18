@@ -33,7 +33,7 @@ const MobileApp = () => {
             <button className="btn">Explore Now </button>
           </a>
         </div>
-        <div className="app-image">
+        <div className="app-image small">
           <img src={app1} alt="Virtual School App" />
         </div>
       </div>
@@ -121,25 +121,34 @@ const MobileApp = () => {
         <div className="app-image">
           <img src={app5} alt="Virtual School App" />
         </div>
-      
       </div>
       <div className="mobile-app-section">
         <div className="app-image">
           <img src={app6} alt="Virtual School App" />
         </div>
-      
       </div>
       <div className="mobile-app-section">
+        <div className="app-info">
+          <h2>Contact Us</h2>
+          <p>
+            <i className="fa-solid fa-location-dot" style={{ color: "#3366FF" ,marginRight:"15px" }}></i>14B, Ratlam Kothi, Geeta
+            Bhawan Square, Indore (M.P.), 452018
+          </p>
+          <p>
+            <i className="fa-solid fa-phone" style={{ color: "#3366FF" ,marginRight:"15px" }}></i>+91 7474454654
+          </p>
+          <p>
+            <i className="fa-solid fa-envelope" style={{ color: "#3366FF" ,marginRight:"15px"}}></i>info@myvirtualschool.in
+          </p>
+        </div>
         <div className="app-image">
           <img src={app7} alt="Virtual School App" />
         </div>
-      
       </div>
       <div className="mobile-app-section">
         <div className="app-image">
           <img src={app8} alt="Virtual School App" />
         </div>
-      
       </div>
     </>
   );

@@ -2,16 +2,17 @@
 .social {
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 1rem;
+    flex-direction: column;
+  
   }
   
 
   .social-links {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 2rem; 
+    align-items: flex-start;
+    gap: 1rem; 
     flex-wrap: wrap;
   }
   
@@ -55,18 +56,5 @@
   }
   
 
-  @media screen and (max-width: 480px) {
-    .social-links {
-      flex-direction: row;
-      gap: 1rem; 
-    }
-  
-    .social-link {
-      font-size: 0.9rem;
-    }
-  
-    .social-link i {
-      font-size: 1.2rem; 
-    }
-  }
+
   

@@ -18,6 +18,11 @@ import Programs from "./component/service/Program";
 import CareerCounseling from "./component/counseling/CareerCounselling";
 import CollegeCounseling from "./component/counseling/CollegeCounseling";
 import MobileApp from "./component/myapp/Myapp";
+import Gallery from "./component/general/Slider3d";
+import Slider3d from "./component/general/Slider3d";
+import Slider from "./component/Slider/Slider";
+// import Carousel from "./component/general/Slider3d";
+// import TestimonialSlider from "./component/general/Slider3d";
 function App() {
   return (
     <>
@@ -28,7 +33,7 @@ function App() {
           <Route path="/hero" element={<Hero />} />
 
           <Route path="/admission" element={<Admissions />} />
-          <Route path="/iitjee" element={<IItJeeCounselling />} />
+          <Route path="/entrance" element={<IItJeeCounselling />} />
           <Route path="/careercounseling" element={<CareerCounseling />} />
           <Route path="/collegecounseling" element={<CollegeCounseling />} />
 
@@ -37,8 +42,13 @@ function App() {
           <Route path="/workshop" element={<WorkshopSeminar />} />
           <Route path="/academic" element={<AcademicSupport />} />
           <Route path="/program" element={<Programs />} />
-          <Route path="/app" element={<MobileApp />} />
+          <Route path="/getapp" element={<MobileApp />} />
           <Route path="/gallery" element={<ImageGallery />} />
+      
+          <Route path="/3d" element={<Slider3d />} />
+
+
+         
         </Routes>
       </AnimatePresence>
     </>

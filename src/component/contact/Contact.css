@@ -1,15 +1,22 @@
+.contact {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 3%;
+  background-color: var(--bg-color);
+}
+
+.contact-container {
+  width: 100%;
+  background-color: white;
+  padding: 2rem 3%;
+}
+
 .contact h2 {
   margin-bottom: 3rem;
   font-size: 2rem;
 }
 
-.contact {
-  margin-bottom: 3rem;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem 3%;
-}
 
 .form {
   width: 50vw;
@@ -61,12 +68,24 @@
   border-radius: 0.3rem;
 }
 
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+
+}
+
 .contact-details {
   display: flex;
   gap: 2rem;
+
   align-items: center;
   flex-wrap: wrap;
   padding-bottom: 1rem;
+}
+
+.contact .contact-details {
+  flex-wrap: nowrap;
 }
 
 .contact-details i {
@@ -135,9 +154,13 @@
     border: 1px solid var(--border-color);
   }
 
-  .contact-details {
+  .contact-info {
+    flex-direction: column;
+  }
+
+  .contact-info .contact-details {
     flex-wrap: nowrap;
-    /* flex-wrap: wrap; */
+  flex-direction: row;
     padding-bottom: 2rem;
   }
 

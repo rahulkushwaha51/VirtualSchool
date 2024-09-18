@@ -1,42 +1,200 @@
+/* parrallax */
+
+#canvas {
+  position: fixed;
+  top: 2rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  background-image: url("../../assets/hero-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#tsparticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+.bubble-line span {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: move 10s linear infinite;
+}
+
+.bubble-line img:nth-child(1) {
+  width: 10%;
+  transition-delay: 1s;
+}
+
+.bubble-line img:nth-child(2) {
+  width: 15%;
+  transition-delay: 2s;
+}
+
+.bubble-line img:nth-child(3) {
+  width: 30%;
+  transition-delay: 3s;
+}
+
+.bubble-line img:nth-child(4) {
+  width: 10%;
+  transition-delay: 4s;
+}
+
+.bubble-line img:nth-child(5) {
+  width: 15%;
+  transition-delay: 5s;
+}
+
+.bubble-line img:nth-child(6) {
+  width: 20%;
+  transition-delay: 6s;
+}
+
+.bubble-line {
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@keyframes move {
+  0% {
+    transform: rotate(0deg);
+    width: 100%;
+    opacity: 1;
+  }
+
+  50% {
+    transform: rotate(90deg);
+    opacity: 0.5;
+
+  }
+
+  70% {
+    opacity: 0.7;
+    transform: rotate(90deg);
+  }
+
+  100% {
+    transform: rotate(180deg);
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+
+
+
+/* parrallax ends */
+
 .home-container {
   position: relative;
   min-height: 100vh;
-  padding: 3rem 0 2rem;
   text-align: center;
+}
+
+.home-section {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10rem 5%;
+  z-index: -1;
 }
 
 .home-info {
-  text-align: center;
+  /* width: 100%; */
+  text-align: left;
+  margin-left: 45%;
 }
 
-.home-info h1 {
-  font-size: 36px;
-  font-weight: 600;
+.home-info h2 {
+  font-size: 2rem;
+  text-wrap: wrap;
+  font-weight: 700;
+  color: var(--bg-second);
 }
 
 .home-info p {
-  font-size: 15px;
-  color: var(--fade-color);
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--bg-second);
 }
 
 .home-info button {
-  margin: 2rem 0;
+  font-size: 1.2rem;
 }
 
-.home-container .img img {
-  width: 80%;
-  padding-top: 4rem;
-  position: relative;
+.home-info h2 b {
+
+  color: var(--primary-color);
+}
+
+/* social icons */
+
+.home-social-icons {
+  position: fixed;
+  right: 0;
+  top: 45%;
+  width: 3rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2rem;
+  color: white;
+  font-size: 1.5rem;
+  z-index: 10;
+}
+
+.home-social-icons span {
+  padding: 1rem;
+
+}
+
+.home-social-icons span:nth-child(1) {
+  cursor: pointer;
+  background-color: blue;
+  color: white;
+}
+
+.home-social-icons span:nth-child(2) {
+  cursor: pointer;
+  background-color: rgb(14, 203, 49);
+  color: white;
+}
+
+.home-social-icons span:nth-child(3) {
+  cursor: pointer;
+  background-color: #ff4747;
+  color: white;
+}
+
+.impact {
+  border-top: 1px solid black;
 }
 
 .home-container .impact {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  background-color: var(--main-color-second);
+  background-color: var(--bg-second);
   padding: 3rem 0;
   position: relative;
   margin-top: -0.4rem;
   z-index: 2;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.201);
 }
 
 .home-container .impact-row {
@@ -55,50 +213,52 @@
   font-size: 14px;
 }
 
-.career-guidance {
-  background: var(--bg-second);
-  text-align: center;
-  padding: 4rem 12rem;
-}
+/* intro  */
 
-.career-guidance h2 {
-  font-size: 24px;
-  font-weight: 500;
-}
-
-.career-guidance p {
-  font-size: 14px;
-}
-
-.career-guidance-grid {
+.intro-video {
+  background-color: var(--border-color);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background-color: var(--bg-second);
+  border-top: 1px solid var(--fade-color);
+
 }
 
-.career-guidance-grid .card {
+.intro {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 1rem;
+  /* align-items: center; */
+  text-align: left;
+  padding: 2rem 2rem;
 }
 
-.career-guidance-grid .card img {
-  height: 80px;
-  width: 80px;
-  margin-bottom: 1rem;
+.intro-video video {
+  width: 100%;
+  height: 100%;
 }
 
-.career-guidance-grid .card p {
-  font-size: 14px;
+.intro button {
+  width: max-content;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.home-container .img img {
+  width: 80%;
+  padding-top: 4rem;
+  position: relative;
 }
 
 .award {
   text-align: center;
   padding: 4rem 5%;
+  color: var(--bg-color);
+  background-color: var(--fade-color);
 }
 
 .award h2 {
@@ -108,110 +268,55 @@
 
 .award-row {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-top: 2rem;
-  padding: 0;
+  padding: 2rem 0;
 }
 
 .award .card {
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-
+  width: 100%;
+  /* text-wrap: wrap; */
+  background-color: transparent;
 }
 
 .award .card p {
-  font-size: 18px;
+  font-size: 1.3rem;
+  font-weight: 500;
 }
 
 
-.home-partner {
-  text-align: center;
-  padding: 2rem 5%;
-}
-
-.home-partner h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
-.home-partner-button button {
-  font-size: 1rem;
-}
-
-.home-partner-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}
-
-.home-partner button.active {
-  background-color: var(--main-color-second);
-  color: var(--text-color-second);
-}
-
-.partner-school-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.partner-school-grid .card {
-  display: flex;
-  height: 10rem;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;box-shadow: 2px 2px 4px var(--border-color);
-  border-radius: 0.5rem;
-}
-
-.partner-school-grid .card img {
-  height: 50%;
-  width: 50%;
-}
-
-.partner-school-grid .card p {
-  font-size: 1.4rem;
-  padding: 1rem 0 0;
-}
-
-.social-media a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  height: 4rem;
-  width: 4rem;
-  background-color: transparent;
-  border: 0.2rem solid var(--main-color);
-  border-radius: 50%;
-  font-size: 2rem;
-  color: var(--main-color);
-  margin: 3rem 1.5rem 3rem 0;
-  transition: all 0.5s ease-in;
-}
-
-.social-media a:hover {
-  background-color: var(--main-color);
-  color: var(--bg-second);
-  box-shadow: 0 0 1rem var(--main-color);
-}
 
 @media (min-width: 769px) and (max-width: 1024px) {
-  .home-container {
-    padding: 5rem 0 2rem;
+
+  canvas {
+    background-size: 100% 100%;
+    background-position: top;
   }
 
-  .home-info h1 {
-    font-size: 32px;
+  .home-container {
+    padding: 2rem 0;
+
+  }
+
+  .home-section {
+    padding: 5rem 5%;
+    width: 100%;
+    height: 100%;
+  }
+
+  .home-info {
+    margin: 0;
+  }
+
+  .home-info h2 {
+    font-size: 2rem;
   }
 
   .home-info p {
-    font-size: 14px;
+    font-size: 1.2rem;
   }
 
   .home-container .img img {
@@ -220,133 +325,64 @@
   }
 
   .home-container .impact {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .career-guidance {
-    padding: 4rem 6rem;
-  }
-
-  .career-guidance h2 {
-    font-size: 22px;
-  }
-
-  .career-guidance p {
-    font-size: 13px;
-  }
-
-  .career-guidance-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
 
+  .home-container .impact-row {
+    flex-direction: column;
+
+  }
+
+  .intro-video {
+    flex-direction: column;
+  }
+
+  .intro {
+    width: 100%;
+    padding: 2rem 0;
+  }
+
+  .intro-video video {
+    width: 100%;
+    height: 100%;
+  }
+
   .award-row {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .home-partner {
-    padding: 2rem 5%;
-  }
-
-  .home-partner h2 {
-    font-size: 2.5rem;
-  }
-
-  .home-partner-button {
-    gap: 1.5rem;
-  }
-
-  .home-partner-button button {
-    font-size: 1.8rem;
-  }
-
-  .partner-school-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
-
-  .partner-school-grid .card {
-    height: 12rem;
-  }
-
-  .partner-school-grid .card p {
-    font-size: 1.5rem;
-  }
-
-  .social-media a {
-    height: 3.5rem;
-    width: 3.5rem;
-    font-size: 1.8rem;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-
 @media (max-width: 768px) {
-  .home-container {
-    padding: 2rem 0 2rem;
-  }
 
-  .home-container .img img {
+  .home-section {
+    padding: 5rem 0;
     width: 100%;
+    height: auto;
   }
 
   .home-info {
     padding: 0 1rem;
+    margin: 0;
+  }
+
+  .home-info h1 {
+
+    font-size: 1.2rem;
+  }
+
+  .home-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .home-info p {
+    font-size: 0.8rem;
   }
 
   .award-row {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .career-guidance {
-    padding: 4rem 1rem;
-  }
-
-  .career-guidance h2 {
-    font-size: 28px;
-    margin-bottom: 2rem;
-  }
-
-  .career-guidance-grid {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 2rem;
-  }
-
-  .home-container .home-partner {
-    padding: 0;
-  }
-
-  .home-container .home-partner h2 {
-    font-size: 2rem;
-    margin: 2rem 0;
-  }
-
-  .home-partner-button {
-    gap: 1rem;
-    padding: 0 1rem;
-  }
-
-  .home-partner-button button {
-    width: 100%;
-    font-size: 12px;
-  }
-
-  .partner-school-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    padding: 0 1rem;
-  }
-
-  .partner-school-grid .card {
-    height: 10rem;
-    justify-content: flex-start;
-    padding: 1rem 1rem;
-  }
-
-  .partner-school-grid .card p {
-    font-size: 12px;
-    padding: 0 1rem;
-  }
 
   .home-container .impact {
     grid-template-columns: repeat(2, 1fr);
@@ -364,5 +400,20 @@
   .home-img {
     width: 70%;
     margin: 1rem 0;
+  }
+
+  .intro-video {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .intro-video video {
+    width: 100%;
+  }
+
+  .intro {
+    width: 100%;
+    padding: 0;
   }
 }

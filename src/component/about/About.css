@@ -1,13 +1,8 @@
-.header {
-  background-image: url("../../assets/about-banner.jpg");
-  /* padding: 12% 5%; */
-}
-
 .about-container {
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
   padding: 3rem 5%;
+  background-color: var(--bg-color);
 }
 
 .about-section {
@@ -62,7 +57,6 @@
   display: flex;
   gap: 2rem;
   justify-content: center;
-  margin-bottom: 1rem;
   padding: 3rem 5%;
 }
 
@@ -79,7 +73,7 @@
   display: flex;
   align-items: center;
   padding: 0 5%;
-  margin-top: 5rem;
+
   gap: 3rem;
   background-color: var(--bg-second);
 }
@@ -149,6 +143,19 @@
   color: #555;
 }
 
+@media (max-width: 1024px) {
+  .about-container {
+    flex-direction: column;
+  }
+  .vision,
+  .mission {
+    padding: 1rem 3%;
+  }
+
+  .experts {
+    padding: 2rem 0;
+  }
+}
 
 @media (max-width: 768px) {
   .about-container {

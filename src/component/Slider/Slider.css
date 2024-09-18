@@ -1,0 +1,56 @@
+.my-own-custom-container {
+  width: 100%;
+  min-height: 100% !important;
+  position: relative;
+  background-color: var(--primary-color) !important;
+  padding: 2rem 5%;
+}
+
+.my-own-custom-container .card {
+  width: 90%;
+  height: auto;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding-bottom: 2rem;
+  background-color: var(--bg-color);
+}
+
+.my-own-custom-container .card-img {
+  width: 100%;
+  height: 10rem;
+  border-radius: 10px;
+  background-color: var(--bg-second);
+}
+
+.my-own-custom-container .card-img img {
+  width: 100%;
+  height: 100%;
+  /* padding: 1rem; */
+
+}
+
+.my-own-custom-container .card h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+  padding: 1rem 2rem 0;
+  text-align: left;
+}
+
+.my-own-custom-container .card p {
+  margin-top: 5px;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  padding: 0 2rem;
+  text-align: left;
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .my-own-custom-container .card {
+    width: 100%;
+
+  }
+
+}

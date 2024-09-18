@@ -57,11 +57,7 @@
 }
 
 /* Modal */
-.header {
-    background-image: url("../../assets/header.png");
-    background-color: var(--main-color);
 
-}
 
 .modal-backdrop {
     position: fixed;

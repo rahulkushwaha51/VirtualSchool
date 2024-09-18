@@ -1,0 +1,43 @@
+.slider-3d {
+   width: 100%;
+   height: clamp(250px, 40vh, 600px);
+   overflow: hidden;
+   padding: 3rem 0;
+
+}
+
+.slider-3d-grid {
+   width: 100%;
+   min-width: calc(var(--quantity) * 200px);
+   position: relative;
+}
+
+.slider-3d-grid li {
+   width: 150px;
+   height: 150px;
+   padding: 5rem 1rem;
+   outline: .5rem solid #f0d1fd;
+   border-radius: 50%;
+   overflow: hidden;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   position: absolute;
+   background-color: var(--bg-color);
+   left: 100%;
+   animation: autoRun var(--time) linear infinite;
+   animation-delay: calc((var(--time) / var(--quantity)) * var(--i) - var(--time));
+
+}
+
+.slider-3d-grid li img {
+   width: 150px;
+   background-color: white;
+}
+
+@keyframes autoRun {
+   to {
+      left: -200px;
+   }
+}

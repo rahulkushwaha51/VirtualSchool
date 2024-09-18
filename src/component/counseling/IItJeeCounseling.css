@@ -50,6 +50,7 @@
   @media (max-width: 768px) {
     .counseling-container {
       padding: 1.5rem 3%;
+      min-width: 100%;
     }
   
     .counseling-container h1 {
